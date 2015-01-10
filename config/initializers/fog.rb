@@ -8,6 +8,7 @@ CarrierWave.configure do |config|
   }
   config.fog_directory  = ENV['AWS_BUCKET']                             # required
   config.fog_attributes = {'Cache-Control'=>'max-age=315576000'}  # optional, defaults to {}
+  config.asset_host = "http://#{config.fog_directory}.s3.amazonaws.com"
 
 
   # For testing, upload files to local `tmp` folder.
