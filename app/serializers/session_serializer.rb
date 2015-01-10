@@ -4,6 +4,10 @@ class SessionSerializer < ApplicationSerializer
   has_one :observation
 
   def photo_url
-  	object.session_photo.url ? ("http://cwhite.local:3000" + object.session_photo.url) : nil
+  	if Rails.env.development?
+  		object.session_photo.url ? ("http://cwhite.local:3000" + object.session_photo.url) : nil
+  	else
+  		object.session_photo.url
+  	end
   end
 end
