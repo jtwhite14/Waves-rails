@@ -28,6 +28,7 @@ gem 'geokit-rails'
 gem 'exifr'
 gem 'geocoder'
 gem 'friendly_id'
+gem 'sidekiq'
 
 
 
