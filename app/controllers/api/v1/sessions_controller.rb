@@ -1,0 +1,30 @@
+class Api::V1::SessionsController < APIController
+
+	def index
+		@sessions = current_user.sessions.all
+		respond_with @sessions
+	end
+
+	def show
+		@session = current_user.sessions.find(params[:id])
+		respond_with @session
+	end
+
+	def create
+		@session = SessionService.new(current_user).create! session_params
+		respond_with @session, location: api_v1_session_path(@session)
+	end
+
+	def upload
+		@session = current_user.sessions.find(params[:id])
+		@session.session_photo = params[:session_photo]
+		@session.save
+		respond_with @session, location: api_v1_session_path(@session)
+	end
+
+private
+
+	def session_params
+		params[:session].permit(:latitude, :longitude, :timestamp, :notes, :rating, :session_photo, :wave_id)
+	end
+end
