@@ -11,7 +11,7 @@ class Api::V1::WavesController < APIController
 	end
 
 	def sessions
-		@sessions = current_user.waves.find(params[:id]).sessions
+		@sessions = current_user.waves.find(params[:id]).sessions.order(:timestamp)
 		respond_with @sessions
 	end
 
