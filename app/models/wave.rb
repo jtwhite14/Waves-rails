@@ -18,6 +18,10 @@ class Wave < ActiveRecord::Base
 	  end
 	end
 
+  def title_photo_url
+    self.sessions.order(:rating).first.session_photo.url
+  end
+
 	
 	def slug_candidates
     [
