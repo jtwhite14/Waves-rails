@@ -19,7 +19,7 @@ class Wave < ActiveRecord::Base
 	end
 
   def title_photo_url
-    self.sessions.order(:rating).first.session_photo.url
+    self.sessions.order(:rating).first.session_photo.url if self.sessions.count > 0
   end
 
 	
