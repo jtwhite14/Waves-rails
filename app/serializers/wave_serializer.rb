@@ -5,5 +5,9 @@ class WaveSerializer < ApplicationSerializer
   	object.slug.underscore.humanize if object.slug 
   end
 
+  def distance
+  	object.has_attribute?(:distance) ? object.distance : ""
+  end
+
   has_one :buoy
 end
