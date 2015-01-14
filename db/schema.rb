@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150107203530) do
+ActiveRecord::Schema.define(version: 20150114153013) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,8 +23,8 @@ ActiveRecord::Schema.define(version: 20150107203530) do
     t.float    "longitude"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "title"
-    t.string   "description"
+    t.string   "title",       default: ""
+    t.string   "description", default: ""
     t.string   "station_id"
   end
 
@@ -64,7 +64,7 @@ ActiveRecord::Schema.define(version: 20150107203530) do
     t.integer  "user_id"
     t.integer  "wave_id"
     t.text     "notes"
-    t.integer  "rating", default: 0, null: false
+    t.integer  "rating"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "observation_id"
