@@ -1,5 +1,5 @@
 class WaveSerializer < ApplicationSerializer
-  attributes :id, :title, :slug, :latitude, :longitude, :title_photo_url
+  attributes :id, :title, :slug, :latitude, :longitude, :title_photo_url, :map_photo_url
 
   def slug
   	object.slug.underscore.humanize if object.slug 

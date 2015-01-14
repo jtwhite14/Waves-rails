@@ -22,6 +22,10 @@ class Wave < ActiveRecord::Base
     (self.sessions.count > 0) ? self.sessions.order(:rating).first.session_photo.url : ""
   end
 
+  def map_photo_url
+    (self.sessions.count > 0) ? self.sessions.order(:rating).first.session_photo(:map).url : ""
+  end
+
 	
 	def slug_candidates
     [
