@@ -29,6 +29,7 @@ gem 'exifr'
 gem 'geocoder'
 gem 'friendly_id'
 gem 'sidekiq'
+gem "bugsnag"
 
 
 
