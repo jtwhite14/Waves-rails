@@ -3,7 +3,7 @@ class Api::V1::WavesController < APIController
 	def index
 		@waves = Wave.all
 		if (params[:latitude] && params[:longitude])
-			@waves = DistanceCollection.new(@waves).set_distance_from([params[:latitude], params[:longitude]])
+			@waves = DistanceCollection.new(@waves).set_distance_from([params[:latitude], params[:longitude]]).sort_by(&:distance)
 			@waves = @waves.take(params[:limit].to_i) if params[:limit]
 		end
 		respond_with @waves
