@@ -1,4 +1,6 @@
 class WaveSerializer < ApplicationSerializer
+	include ActionView::Helpers::NumberHelper
+	
   attributes :id, :title, :slug, :latitude, :longitude, :title_photo_url, :map_photo_url, :distance
 
   def slug
