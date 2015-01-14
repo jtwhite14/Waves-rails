@@ -2,7 +2,7 @@ class Api::V1::WavesController < APIController
 
 	def index
 		@waves = Wave.all
-		@waves.limit(params[:limit]) if params[:limit]
+		@waves = @waves.limit(params[:limit]) if params[:limit]
 		respond_with @waves
 	end
 
