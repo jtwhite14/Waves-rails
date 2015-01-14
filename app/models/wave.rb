@@ -19,11 +19,11 @@ class Wave < ActiveRecord::Base
 	end
 
   def title_photo_url
-    (self.sessions.count > 0) ? self.sessions.order(:rating).first.session_photo.url : ""
+    (self.sessions.count > 0) ? self.sessions.order('rating DESC').first.session_photo.url : ""
   end
 
   def map_photo_url
-    (self.sessions.count > 0) ? self.sessions.order(:rating).first.session_photo.map.url : ""
+    (self.sessions.count > 0) ? self.sessions.order('rating DESC').first.session_photo.map.url : ""
   end
 
 	
