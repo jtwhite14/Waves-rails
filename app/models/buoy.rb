@@ -1,5 +1,5 @@
 class Buoy < ActiveRecord::Base
-	acts_as_mappable :lat_column_name => :latitude, :lng_column_name => :longitude
+	acts_as_mappable :default_units => :miles, :lat_column_name => :latitude, :lng_column_name => :longitude
 
 	has_many :observations
 

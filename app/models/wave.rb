@@ -1,8 +1,8 @@
 class Wave < ActiveRecord::Base
 	extend FriendlyId
-  acts_as_mappable :lat_column_name => :latitude, :lng_column_name => :longitude
+  acts_as_mappable :default_units => :miles, :lat_column_name => :latitude, :lng_column_name => :longitude
   
-  before_validation :reverse_geocode
+  #before_validation :reverse_geocode
   friendly_id :slug_candidates, use: [:slugged, :scoped], :scope => :user
 
 
@@ -10,14 +10,14 @@ class Wave < ActiveRecord::Base
   belongs_to :buoy
   has_many :sessions
 
-  reverse_geocoded_by :latitude, :longitude do |obj,results|
-	  if geo = results.first
-	  	Rails.logger.info geo.inspect
-	    obj.city    = geo.city
-	    obj.state = geo.state
-	    obj.address = geo.address
-	  end
-	end
+ #  reverse_geocoded_by :latitude, :longitude do |obj,results|
+	#   if geo = results.first
+	#   	Rails.logger.info geo.inspect
+	#     obj.city    = geo.city
+	#     obj.state = geo.state
+	#     obj.address = geo.address
+	#   end
+	# end
 
   def title_photo_url
     (self.sessions.count > 0) ? self.sessions.order('rating DESC').first.session_photo.url : ""
