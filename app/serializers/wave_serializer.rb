@@ -6,7 +6,7 @@ class WaveSerializer < ApplicationSerializer
   end
 
   def distance
-  	object.respond_to?(:distance) ? object.distance : ""
+  	object.respond_to?(:distance) ? number_with_precision(object.distance, precision: 0).to_s : ""
   end
 
   has_one :buoy
