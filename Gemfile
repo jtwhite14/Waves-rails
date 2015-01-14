@@ -31,6 +31,7 @@ gem 'friendly_id'
 gem 'sidekiq'
 gem "bugsnag"
 gem 'mini_magick'
+gem 'newrelic_rpm'
 
 
 
