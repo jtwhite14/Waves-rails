@@ -23,6 +23,6 @@ class Api::V1::WavesController < APIController
 private
 
 	def wave_params
-		params[:wave].permit(:title, :latitude, :longitude)
+		params[:wave].permit(:title, :latitude, :longitude, :slug)
 	end
 end

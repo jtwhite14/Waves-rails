@@ -5,6 +5,12 @@ class WaveService
 	end
 
 	def create! params
-		wave = @user.waves.create(title: params[:title], buoy: Buoy.closest(origin: [params[:latitude], params[:longitude]]).first)
+		wave = @user.waves.create(
+				title: params[:slug],
+				slug: params[:slug], 
+				latitude: params[:latitude], 
+				longitude: params[:longitude],
+		 		buoy: Buoy.closest(origin: [params[:latitude], params[:longitude]]).first
+		)
 	end
 end
