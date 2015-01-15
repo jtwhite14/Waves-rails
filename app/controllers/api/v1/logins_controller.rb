@@ -11,7 +11,7 @@ class Api::V1::LoginsController < APIController
 		if resource.valid_password?(params[:user_login][:password])
 			sign_in(:user, resource)
 			resource.ensure_authentication_token!
-			render json: resource, serializer: AccountSerializer
+			render json: resource
 			return
 		end
 		invalid_login_attempt
