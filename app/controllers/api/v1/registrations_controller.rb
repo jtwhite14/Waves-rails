@@ -16,7 +16,7 @@ class API::V1::RegistrationsController < APIController
 		if user.save
 			sign_in(:user, user)
 			user.ensure_authentication_token!
-			render json: user, serializer: AccountSerializer
+			render json: user
 			return
 		else
 			warden.custom_failure!
