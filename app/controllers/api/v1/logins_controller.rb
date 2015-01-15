@@ -1,4 +1,4 @@
-class API::V1::LoginsController < APIController
+class Api::V1::LoginsController < APIController
 	before_filter :authenticate_user_from_token!, :except => [:create]
 	before_filter :authenticate_user!, :except => [:create]
 	before_filter :ensure_params_exist, :only => [:create]
