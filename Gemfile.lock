@@ -378,7 +378,6 @@ DEPENDENCIES
   rack-cors
   rails (= 4.1.4)
   rails_layout
-  redis
   redis-rails
   rest-firebase
   sass-rails (~> 4.0.3)
