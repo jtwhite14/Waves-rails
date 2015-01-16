@@ -19,10 +19,6 @@ module WavesRails
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
-    if ENV["REDISCLOUD_URL"]
-    uri = URI.parse(ENV["REDISCLOUD_URL"])
-    config.cache_store = :redis_store, "redis://rediscloud:IhZcVRsuKjcWrmM1@pub-redis-18127.us-east-1-2.2.ec2.garantiadata.com:18127"
-    #config.cache_store = :redis_store, uri.host, { port: uri.port, username: uri.user, password: uri.password }
-    end
+    
   end
 end

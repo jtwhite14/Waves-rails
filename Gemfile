@@ -34,7 +34,7 @@ gem 'mini_magick'
 gem 'newrelic_rpm'
 gem "dalli"
 gem "memcachier"
-gem 'redis-rails'
+#gem 'redis-rails'
 
 
 
