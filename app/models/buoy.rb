@@ -30,6 +30,7 @@ class Buoy < ActiveRecord::Base
 		buoys.each do |buoy|
 			puts buoy.title
 			Observation.import! buoy
+			puts buoy.current_observation.inspect
 		end
 	end
 
