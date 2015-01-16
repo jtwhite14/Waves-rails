@@ -19,7 +19,7 @@ GIT
 
 GIT
   remote: git://github.com/CharlieWhite/redis-store.git
-  revision: 04b67cdd875e37f1b97d433570751d457f298cb2
+  revision: 95af85c3df23bcc7f875ffb45308b724020959e6
   specs:
     redis-store (1.1.4)
       redis (>= 2.2)
