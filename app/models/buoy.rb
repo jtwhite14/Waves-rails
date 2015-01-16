@@ -2,13 +2,11 @@ class Buoy < ActiveRecord::Base
 	acts_as_mappable :default_units => :miles, :lat_column_name => :latitude, :lng_column_name => :longitude
 
 	has_many :observations
+	has_one :current_observation, ->  {(order("timestamp DESC").limit(1))}, class_name: Observation
 
 	validates :station_id, uniqueness: true
 
 
-	def current_observation
-		self.observations.order(:timestamp).last
-	end
 
 	def self.import! buoy_id=nil
 		buoy_list = BuoyData::NoaaBuoyList.new
