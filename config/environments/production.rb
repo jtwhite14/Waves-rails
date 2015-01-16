@@ -58,7 +58,7 @@ Rails.application.configure do
   
   if ENV["REDISCLOUD_URL"]
     uri = URI.parse(ENV["REDISCLOUD_URL"])
-    config.cache_store = :redis_store, uri.host, { port: uri.port, username: uri.username, password: uri.password }
+    config.cache_store = :redis_store, uri.host, { port: uri.port, username: uri.user, password: uri.password }
   end
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
