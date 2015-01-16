@@ -4,7 +4,8 @@ class BuoysController < ApplicationController
   # GET /buoys
   # GET /buoys.json
   def index
-    @buoys = Buoy.all
+    @buoys = Buoy.page(params[:page]).per(100)
+    respond_with @buoys, serializer: PaginationSerializer
   end
 
   # GET /buoys/1

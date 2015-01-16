@@ -36,6 +36,7 @@ gem "dalli"
 gem "memcachier"
 gem 'redis-store', github: 'CharlieWhite/redis-store'
 gem 'redis-rails', github: 'CharlieWhite/redis-rails'
+gem 'kaminari'
 
 
 

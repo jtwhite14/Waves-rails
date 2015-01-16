@@ -221,6 +221,9 @@ GEM
       thor (>= 0.14, < 2.0)
     json (1.8.1)
     jwt (1.2.0)
+    kaminari (0.16.1)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -378,6 +381,7 @@ DEPENDENCIES
   geokit-rails
   jbuilder (~> 2.0)
   jquery-rails
+  kaminari
   memcachier
   mini_magick
   newrelic_rpm
