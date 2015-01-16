@@ -55,10 +55,11 @@ Rails.application.configure do
   # if ENV["MEMCACHEDCLOUD_SERVERS"]
   #   config.cache_store = :dalli_store, ENV["MEMCACHEDCLOUD_SERVERS"].split(','), { :username => ENV["MEMCACHEDCLOUD_USERNAME"], :password => ENV["MEMCACHEDCLOUD_PASSWORD"] }
   # end
-  puts ENV["REDISCLOUD_URL"]
-  #if ENV["REDISCLOUD_URL"]
-    config.cache_store = :redis_store#, ENV["REDISCLOUD_URL"]
-  #end
+  
+  if ENV["REDISCLOUD_URL"]
+    uri = URI.parse(ENV["REDISCLOUD_URL"])
+    config.cache_store = :redis_store, uri.host, { port: uri.port, username: uri.username, password: uri.password }
+  end
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.action_controller.asset_host = "http://assets.example.com"
