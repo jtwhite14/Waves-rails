@@ -41,7 +41,7 @@ gem 'rails_12factor', group: :production
 gem 'puma'
 
 
-gem 'buoy_data', :github => 'CharlieWhite/buoy_data'
+gem 'buoy_data', :github => 'minch/buoy_data'
 
 
 group :development do
