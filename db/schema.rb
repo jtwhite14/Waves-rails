@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150115212531) do
+ActiveRecord::Schema.define(version: 20150116150457) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -113,6 +113,8 @@ ActiveRecord::Schema.define(version: 20150115212531) do
   end
 
   add_index "waves", ["buoy_id"], name: "index_waves_on_buoy_id", using: :btree
+  add_index "waves", ["latitude"], name: "index_waves_on_latitude", using: :btree
+  add_index "waves", ["longitude"], name: "index_waves_on_longitude", using: :btree
   add_index "waves", ["slug"], name: "index_waves_on_slug", using: :btree
   add_index "waves", ["user_id"], name: "index_waves_on_user_id", using: :btree
 
