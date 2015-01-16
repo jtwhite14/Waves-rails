@@ -1,4 +1,14 @@
 GIT
+  remote: git://github.com/CharlieWhite/buoy_data.git
+  revision: 41f3aebbda3f29dd819e67864705b8a6829c0201
+  specs:
+    buoy_data (1.0.0.beta.7)
+      buoy_data
+      httparty
+      jeweler
+      nokogiri
+
+GIT
   remote: git://github.com/CharlieWhite/redis-rails.git
   revision: b0ff6323189591c65623914bf3b446cd269cabf2
   specs:
@@ -13,17 +23,6 @@ GIT
   specs:
     redis-store (1.1.4)
       redis (>= 2.2)
-
-GIT
-  remote: git://github.com/minch/buoy_data.git
-  revision: 7b915abe4a4f04d43172401f735e04bf2cd395ff
-  specs:
-    buoy_data (1.0.0.beta.6)
-      buoy_data
-      httparty
-      jeweler
-      json
-      nokogiri
 
 GEM
   remote: https://rubygems.org/

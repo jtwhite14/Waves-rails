@@ -28,6 +28,7 @@ class Buoy < ActiveRecord::Base
 	def self.import_observations!
 		buoys = Buoy.all
 		buoys.each do |buoy|
+			puts buoy.title
 			Observation.import! buoy
 		end
 	end
@@ -35,6 +36,7 @@ class Buoy < ActiveRecord::Base
 	def self.import_observation_histories!
 		buoys = Buoy.all
 		buoys.each do |buoy|
+			puts buoy.title
 			Observation.import_history! buoy
 		end
 	end
