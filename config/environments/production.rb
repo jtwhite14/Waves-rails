@@ -55,7 +55,7 @@ Rails.application.configure do
   # if ENV["MEMCACHEDCLOUD_SERVERS"]
   #   config.cache_store = :dalli_store, ENV["MEMCACHEDCLOUD_SERVERS"].split(','), { :username => ENV["MEMCACHEDCLOUD_USERNAME"], :password => ENV["MEMCACHEDCLOUD_PASSWORD"] }
   # end
-
+  puts ENV["REDISCLOUD_URL"]
   #if ENV["REDISCLOUD_URL"]
     config.cache_store = :redis_store#, ENV["REDISCLOUD_URL"]
   #end
