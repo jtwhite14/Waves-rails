@@ -3,7 +3,7 @@ class Observation < ActiveRecord::Base
 
   validates :timestamp, uniqueness: { scope: :buoy_id }
 
-  after_create :save_buoy
+  #after_create :save_buoy
 
   def save_buoy
     # Busts the serializer cache
