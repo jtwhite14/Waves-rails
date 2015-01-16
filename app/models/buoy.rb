@@ -23,7 +23,20 @@ class Buoy < ActiveRecord::Base
 				next
 			end
 		end
+	end
 
+	def self.import_observations!
+		buoys = Buoy.all
+		buoys.each do |buoy|
+			Observation.import! buoy
+		end
+	end
+
+	def self.import_observation_histories!
+		buoys = Buoy.all
+		buoys.each do |buoy|
+			Observation.import_history! buoy
+		end
 	end
 
 end
