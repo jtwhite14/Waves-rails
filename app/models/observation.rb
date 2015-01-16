@@ -3,6 +3,13 @@ class Observation < ActiveRecord::Base
 
   validates :timestamp, uniqueness: { scope: :buoy_id }
 
+  after_create :save_buoy
+
+  def save_buoy
+    # Busts the serializer cache
+    self.buoy.save
+  end
+
 
   def self.import! buoy
   	b = BuoyData::NoaaBuoyObservation.new(buoy.station_id)
