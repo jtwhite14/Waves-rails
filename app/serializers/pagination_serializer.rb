@@ -11,4 +11,6 @@ class PaginationSerializer < ActiveModel::ArraySerializer
     }
     super(object, options)
   end
+
+  
 end
