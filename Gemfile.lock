@@ -8,6 +8,22 @@ GIT
       jeweler
       nokogiri
 
+GIT
+  remote: git://github.com/CharlieWhite/redis-rails.git
+  revision: b0ff6323189591c65623914bf3b446cd269cabf2
+  specs:
+    redis-rails (4.0.0)
+      redis-actionpack (~> 4)
+      redis-activesupport (~> 4)
+      redis-store (~> 1.1.0)
+
+GIT
+  remote: git://github.com/CharlieWhite/redis-store.git
+  revision: 04b67cdd875e37f1b97d433570751d457f298cb2
+  specs:
+    redis-store (1.1.4)
+      redis (>= 2.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -267,8 +283,18 @@ GEM
     rdoc (4.2.0)
       json (~> 1.4)
     redis (3.2.0)
+    redis-actionpack (4.0.0)
+      actionpack (~> 4)
+      redis-rack (~> 1.5.0)
+      redis-store (~> 1.1.0)
+    redis-activesupport (4.0.0)
+      activesupport (~> 4)
+      redis-store (~> 1.1.0)
     redis-namespace (1.5.1)
       redis (~> 3.0, >= 3.0.4)
+    redis-rack (1.5.0)
+      rack (~> 1.5)
+      redis-store (~> 1.1.0)
     responders (1.1.2)
       railties (>= 3.2, < 4.2)
     rest-core (3.5.1)
@@ -362,6 +388,8 @@ DEPENDENCIES
   rack-cors
   rails (= 4.1.4)
   rails_layout
+  redis-rails!
+  redis-store!
   rest-firebase
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
