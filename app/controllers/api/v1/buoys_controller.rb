@@ -7,7 +7,7 @@ class Api::V1::BuoysController < APIController
 		# respond_with @buoys, serializer: PaginationSerializer
 		@buoys = Buoy.all.includes(:current_observation)
 		expires_in 1.hour, :public => true
-		respond_with @buoys, root: :buoys
+		respond_with @buoys
 	end
 
 
