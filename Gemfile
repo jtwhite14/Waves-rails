@@ -39,6 +39,7 @@ gem 'redis-rails', github: 'CharlieWhite/redis-rails'
 gem 'kaminari'
 gem 'rails_12factor', group: :production
 gem 'puma'
+gem 'puma_auto_tune'
 
 
 gem 'buoy_data', :github => 'CharlieWhite/buoy_data'
