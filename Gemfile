@@ -17,7 +17,7 @@ gem 'simple_form'
 gem 'thin'
 gem 'statesman', '~> 1.0.0.beta2'
 gem 'carrierwave'
-gem 'active_model_serializers', '~> 0.8.0'
+gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 gem "fog"
 gem 'rack-cors', :require => 'rack/cors'
 gem 'rest-firebase'

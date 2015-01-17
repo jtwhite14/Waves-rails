@@ -6,12 +6,12 @@ class Api::V1::WavesController < APIController
 			@waves = DistanceCollection.new(@waves).set_distance_from([params[:latitude], params[:longitude]]).sort_by(&:distance)
 			@waves = @waves.take(params[:limit].to_i) if params[:limit]
 		end
-		respond_with @waves
+		respond_with @waves, root: :waves
 	end
 
 	def show
-		@wave = current_user.waves.find(params[:id]).includes(sessions: :observation)
-		respond_with @wave
+		@wave = current_user.waves.find(params[:id])
+		respond_with @wave, root: :wave
 	end
 
 	def sessions

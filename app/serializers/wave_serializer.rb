@@ -1,6 +1,6 @@
 class WaveSerializer < ApplicationSerializer
 	include ActionView::Helpers::NumberHelper
-
+	
   attributes :id, :title, :slug, :latitude, :longitude, :title_photo_url, :map_photo_url, :distance, :sessions_count
 
   def slug
@@ -11,5 +11,5 @@ class WaveSerializer < ApplicationSerializer
   	object.respond_to?(:distance) ? number_with_precision(object.distance, precision: 0).to_s : ""
   end
 
-  has_one :buoy
+  belongs_to :buoy
 end
