@@ -10,13 +10,13 @@ class Api::V1::WavesController < APIController
 	end
 
 	def show
-		@wave = current_user.waves.find(params[:id])
+		@wave = current_user.waves.find(params[:id]).includes(sessions: :observation)
 		respond_with @wave
 	end
 
 	def sessions
-		@sessions = current_user.waves.find(params[:id]).sessions.order(:timestamp)
-		respond_with @sessions
+		@sessions = current_user.waves.find(params[:id]).sessions.includes(:observation).order(:timestamp)
+		respond_with @sessions, root: :sessions
 	end
 
 	def create

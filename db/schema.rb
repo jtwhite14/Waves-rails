@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150116151454) do
+ActiveRecord::Schema.define(version: 20150116210653) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -110,7 +110,7 @@ ActiveRecord::Schema.define(version: 20150116151454) do
     t.string   "state"
     t.string   "address"
     t.string   "slug"
-    t.integer  "sessions_count"
+    t.integer  "sessions_count", default: 0
   end
 
   add_index "waves", ["buoy_id"], name: "index_waves_on_buoy_id", using: :btree
