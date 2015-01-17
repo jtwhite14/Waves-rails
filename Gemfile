@@ -34,12 +34,11 @@ gem 'mini_magick'
 gem 'newrelic_rpm'
 gem "dalli"
 gem "memcachier"
-gem 'redis-store', github: 'CharlieWhite/redis-store'
-gem 'redis-rails', github: 'CharlieWhite/redis-rails'
 gem 'kaminari'
 gem 'rails_12factor', group: :production
-gem 'unicorn'
 gem 'rack-timeout'
+gem 'rainbows'
+gem 'em-http-request'
 
 
 gem 'buoy_data', :github => 'CharlieWhite/buoy_data'
