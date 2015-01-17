@@ -38,8 +38,8 @@ gem 'redis-store', github: 'CharlieWhite/redis-store'
 gem 'redis-rails', github: 'CharlieWhite/redis-rails'
 gem 'kaminari'
 gem 'rails_12factor', group: :production
-gem 'puma'
-gem 'puma_auto_tune'
+gem 'unicorn'
+gem 'rack-timeout'
 
 
 gem 'buoy_data', :github => 'CharlieWhite/buoy_data'
