@@ -1,9 +1,8 @@
 class Wave < ActiveRecord::Base
-	extend FriendlyId
-  acts_as_mappable :default_units => :miles, :lat_column_name => :latitude, :lng_column_name => :longitude
+	acts_as_mappable :default_units => :miles, :lat_column_name => :latitude, :lng_column_name => :longitude
   
   #before_validation :reverse_geocode
-  friendly_id :slug_candidates, use: [:slugged, :scoped], :scope => :user
+  #friendly_id :slug_candidates, use: [:slugged, :scoped], :scope => :user
 
 
   belongs_to :user
