@@ -12,10 +12,11 @@ gem 'figaro', '>= 1.0.0.rc1'
 gem 'pg'
 gem 'simple_form'
 gem 'carrierwave'
-gem 'active_model_serializers', '~> 0.8.0'
+#gem 'active_model_serializers', '~> 0.8.0'
 gem "fog"
 gem 'rack-cors', :require => 'rack/cors'
 gem 'rest-firebase'
+gem 'jbuilder'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'geokit'

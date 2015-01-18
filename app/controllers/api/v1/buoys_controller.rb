@@ -10,5 +10,10 @@ class Api::V1::BuoysController < APIController
 		respond_with @buoys
 	end
 
+	def show
+		@buoy = Buoy.find(params[:id])
+		respond_with @buoy
+	end
+
 
 end
