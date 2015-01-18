@@ -5,8 +5,8 @@ class Api::V1::BuoysController < APIController
 	def index
 		@buoys = Buoy.all.includes(:current_observation)
 		expires_in 1.hour, :public => true
-		respond_with @buoys
-		#render json: to_json(@buoys)
+		#respond_with @buoys
+		render json: to_json(@buoys)
 	end
 
 	def show
