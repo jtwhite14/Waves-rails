@@ -27,7 +27,7 @@ class Observation < ActiveRecord::Base
       		mean_wave_direction: b.MWD
       	)
         buoy.observations << observation
-        buoy.update_attribute(current_observation_id: observation.id)
+        buoy.update_attribute(:current_observation_id, observation.id)
       
     end
   end
