@@ -12,7 +12,7 @@ gem 'figaro', '>= 1.0.0.rc1'
 gem 'pg'
 gem 'simple_form'
 gem 'carrierwave'
-gem 'active_model_serializers', '~> 0.9.0'
+gem 'active_model_serializers', '~> 0.8.0'
 gem "fog"
 gem 'rack-cors', :require => 'rack/cors'
 gem 'rest-firebase'
@@ -29,9 +29,10 @@ gem 'newrelic_rpm'
 gem 'kaminari'
 gem 'rails_12factor', group: :production
 gem 'rack-timeout'
-#gem 'rainbows'
-#gem 'em-http-request'
-gem "passenger"
+gem 'rainbows'
+gem 'em-http-request'
+#gem "passenger"
+gem 'postgres_ext-serializers'
 
 
 gem 'buoy_data', :github => 'CharlieWhite/buoy_data'
