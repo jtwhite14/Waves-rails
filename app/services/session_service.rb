@@ -1,6 +1,6 @@
 class SessionService
 
-	def initialize user
+	def initialize session
 		@session = session
 	end
 
