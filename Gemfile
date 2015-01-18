@@ -29,8 +29,9 @@ gem 'newrelic_rpm'
 gem 'kaminari'
 gem 'rails_12factor', group: :production
 gem 'rack-timeout'
-gem 'rainbows'
-gem 'em-http-request'
+#gem 'rainbows'
+#gem 'em-http-request'
+gem "passenger"
 
 
 gem 'buoy_data', :github => 'CharlieWhite/buoy_data'

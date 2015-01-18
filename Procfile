@@ -1,2 +1,2 @@
-web: bundle exec rainbows -p $PORT -c ./config/rainbows.rb
+web: bundle exec passenger start -p $PORT --max-pool-size 2
 worker: bundle exec sidekiq -C config/sidekiq.yml
