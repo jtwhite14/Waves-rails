@@ -34,6 +34,7 @@ gem 'em-http-request'
 
 
 gem 'buoy_data', :github => 'CharlieWhite/buoy_data'
+gem 'derailed_benchmarks', group: :development
 
 
 group :development do
