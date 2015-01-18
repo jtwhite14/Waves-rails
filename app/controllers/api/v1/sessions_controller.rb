@@ -15,7 +15,7 @@ class Api::V1::SessionsController < APIController
 		respond_with @session, location: api_v1_session_path(@session)
 	end
 
-	def finalize
+	def update
 		session = current_user.sessions.find(params[:id])
 		@session = SessionService.new(session).finalize! session_params
 		respond_with @session, location: api_v1_session_path(@session)

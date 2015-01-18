@@ -26,11 +26,7 @@ Rails.application.routes.draw do
       	end
       end
       
-      resources :sessions do
-        member do
-          put 'finalize'
-        end
-      end
+      resources :sessions
       resources :buoys
       resources :observations
     end
