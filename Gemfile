@@ -12,11 +12,11 @@ gem 'figaro', '>= 1.0.0.rc1'
 gem 'pg'
 gem 'simple_form'
 gem 'carrierwave'
-#gem 'active_model_serializers', '~> 0.8.0'
+gem 'active_model_serializers', '~> 0.8.0'
 gem "fog"
 gem 'rack-cors', :require => 'rack/cors'
 gem 'rest-firebase'
-gem 'jbuilder'
+#gem 'jbuilder'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'geokit'
@@ -29,10 +29,14 @@ gem 'newrelic_rpm'
 #gem "memcachier"
 gem 'kaminari'
 gem 'rails_12factor', group: :production
-gem 'rack-timeout'
 gem 'rainbows'
 gem 'yajl-ruby', require: 'yajl'
 gem 'em-http-request'
+gem 'request_profiler'
+gem 'stackprof'
+gem 'rack-mini-profiler'
+gem 'flamegraph'
+
 #gem "passenger"
 #gem 'postgres_ext-serializers', :require => false
 

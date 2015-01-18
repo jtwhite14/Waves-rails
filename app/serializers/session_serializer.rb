@@ -1,11 +1,11 @@
-# class SessionSerializer < ApplicationSerializer
-#   attributes :id, :notes, :rating, :photo_url, :timestamp
+class SessionSerializer < ApplicationSerializer
+  attributes :id, :notes, :rating, :photo_url, :timestamp
 
-#   has_one :observation
+  has_one :observation
   
 
 
-#   def photo_url
-#   	object.session_photo.url
-#   end
-# end
+  def photo_url
+  	object.session_photo.url
+  end
+end
