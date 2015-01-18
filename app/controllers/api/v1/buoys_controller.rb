@@ -7,13 +7,19 @@ class Api::V1::BuoysController < APIController
 		# respond_with @buoys, serializer: PaginationSerializer
 		@buoys = Buoy.all.includes(:current_observation)
 		expires_in 1.hour, :public => true
-		respond_with @buoys
+		render json: to_json(buoys: @buoys)
 	end
 
 	def show
 		@buoy = Buoy.find(params[:id])
 		respond_with @buoy
 	end
+
+	def to_json(thing)
+      thing.to_json({include: {
+        current_observation: {},
+      }})
+    end
 
 
 end
