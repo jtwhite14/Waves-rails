@@ -28,7 +28,7 @@ Rails.application.routes.draw do
       
       resources :sessions do
         member do
-          post 'finalize'
+          put 'finalize'
         end
       end
       resources :buoys
