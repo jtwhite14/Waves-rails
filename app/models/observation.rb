@@ -14,7 +14,7 @@ class Observation < ActiveRecord::Base
   def self.import! buoy
   	b = BuoyData::NoaaBuoyObservation.new(buoy.station_id)
   	unless (b.get == nil)
-        buoy.observations << Observation.create(
+        observation = Observation.create(
       		timestamp: DateTime.new(b.YY.to_i, b.MM.to_i, b.DD.to_i, b.hh.to_i, b.mm.to_i, 0),
       		wave_height: b.WVHT,
       		swell_height: b.SwH,
@@ -26,6 +26,8 @@ class Observation < ActiveRecord::Base
       		average_wave_period: b.APD,
       		mean_wave_direction: b.MWD
       	)
+        buoy.observations << observation
+        buoy.update_attribute(current_observation_id: observation.id)
       
     end
   end

@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 ruby '2.1.4'
 gem 'rails', '4.1.4'
-gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
@@ -14,35 +13,20 @@ gem 'simple_form'
 gem 'carrierwave'
 gem 'active_model_serializers', '~> 0.8.0'
 gem "fog"
-gem 'rack-cors', :require => 'rack/cors'
-gem 'rest-firebase'
-#gem 'jbuilder'
-# Use debugger
-# gem 'debugger', group: [:development, :test]
 gem 'geokit'
 gem 'geokit-rails'
 gem 'sidekiq'
 gem "bugsnag"
 gem 'mini_magick'
 gem 'newrelic_rpm'
-#gem "dalli"
-#gem "memcachier"
+# gem "dalli"
+# gem "memcachier"
 gem 'kaminari'
 gem 'rails_12factor', group: :production
 gem 'rainbows'
-gem 'yajl-ruby', require: 'yajl'
 gem 'em-http-request'
-gem 'request_profiler'
-gem 'stackprof'
-gem 'rack-mini-profiler'
-gem 'flamegraph'
-
-#gem "passenger"
-#gem 'postgres_ext-serializers', :require => false
-
-
 gem 'buoy_data', :github => 'CharlieWhite/buoy_data'
-gem 'derailed_benchmarks', group: :development
+
 
 
 group :development do
