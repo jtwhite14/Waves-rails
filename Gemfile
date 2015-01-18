@@ -26,6 +26,7 @@ gem 'rails_12factor', group: :production
 gem 'rainbows'
 gem 'em-http-request'
 gem 'buoy_data', :github => 'CharlieWhite/buoy_data'
+gem 'counter_culture', '~> 0.1.23'
 
 
 

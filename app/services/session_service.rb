@@ -5,14 +5,6 @@ class SessionService
 	end
 
 	def finalize! params
-		
-		# buoy = Buoy.closest(origin: [params[:latitude], params[:longitude]]).first
-
-		# # Set the wave, or create a new one
-		# wave = Wave.where(user: @user, buoy: buoy).first
-		# unless wave
-		# 	wave = Wave.create(user: @user, buoy: buoy, latitude: params[:latitude], longitude: params[:longitude])
-		# end
 		wave = Wave.find(params[:wave_id])
 
 		# Find the current observation data, TODO: move this to observations, and do a remote search if not found.
