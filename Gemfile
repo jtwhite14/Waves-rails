@@ -31,6 +31,7 @@ gem 'kaminari'
 gem 'rails_12factor', group: :production
 gem 'rack-timeout'
 gem 'rainbows'
+gem 'yajl-ruby', require: 'yajl'
 gem 'em-http-request'
 #gem "passenger"
 #gem 'postgres_ext-serializers', :require => false
