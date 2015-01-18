@@ -33,7 +33,8 @@ class SessionService
 				rating: params[:rating],
 				timestamp: params[:timestamp],
 				latitude: params[:latitude],
-				longitude: params[:longitude]
+				longitude: params[:longitude],
+				finalized: true
 			)
 	end
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150118172211) do
+ActiveRecord::Schema.define(version: 20150118181318) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -73,6 +73,7 @@ ActiveRecord::Schema.define(version: 20150118172211) do
     t.datetime "timestamp"
     t.float    "latitude"
     t.float    "longitude"
+    t.boolean  "finalized",      default: false
   end
 
   add_index "sessions", ["observation_id"], name: "index_sessions_on_observation_id", using: :btree
