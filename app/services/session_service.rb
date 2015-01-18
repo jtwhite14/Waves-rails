@@ -1,10 +1,10 @@
 class SessionService
 
 	def initialize user
-		@user = user
+		@session = session
 	end
 
-	def create! params
+	def finalize! params
 		
 		# buoy = Buoy.closest(origin: [params[:latitude], params[:longitude]]).first
 
@@ -20,19 +20,18 @@ class SessionService
 		observation = wave.buoy.observations.find_by(timestamp: rounded_timestamp)
 		unless observation
 			begin
-				Observation.import_history! buoy
+				Observation.import! buoy
 				observation = wave.buoy.observations.find_by(timestamp: rounded_timestamp)
 			rescue
 			end
 		end
 
-		session = @user.sessions.create(
+		@session.update_attributes(
 				wave: wave,
 				observation: observation,
 				notes: params[:notes],
 				rating: params[:rating],
 				timestamp: params[:timestamp],
-				session_photo: params[:session_photo],
 				latitude: params[:latitude],
 				longitude: params[:longitude]
 			)

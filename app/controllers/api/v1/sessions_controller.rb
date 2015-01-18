@@ -11,7 +11,13 @@ class Api::V1::SessionsController < APIController
 	end
 
 	def create
-		@session = SessionService.new(current_user).create! session_params
+		@session = user.sessions.create(session_params)
+		respond_with @session, location: api_v1_session_path(@session)
+	end
+
+	def finalize
+		session = user.sessions.find(params[:id])
+		@session = SessionService.new(session).finalize! session_params
 		respond_with @session, location: api_v1_session_path(@session)
 	end
 
