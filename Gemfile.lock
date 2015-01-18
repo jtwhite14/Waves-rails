@@ -242,15 +242,7 @@ GEM
       rack (~> 1.2)
     orm_adapter (0.5.0)
     pg (0.18.1)
-    pg_array_parser (0.0.9)
     polyglot (0.3.5)
-    postgres_ext (2.4.0)
-      activerecord (>= 4.0.0)
-      arel (>= 4.0.1)
-      pg_array_parser (~> 0.0.9)
-    postgres_ext-serializers (0.0.3)
-      active_model_serializers (~> 0.8.0)
-      postgres_ext (~> 2.1)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -377,7 +369,6 @@ DEPENDENCIES
   mini_magick
   newrelic_rpm
   pg
-  postgres_ext-serializers
   pry-rails
   pry-rescue
   quiet_assets

@@ -32,7 +32,7 @@ gem 'rack-timeout'
 gem 'rainbows'
 gem 'em-http-request'
 #gem "passenger"
-gem 'postgres_ext-serializers'
+#gem 'postgres_ext-serializers', :require => false
 
 
 gem 'buoy_data', :github => 'CharlieWhite/buoy_data'
