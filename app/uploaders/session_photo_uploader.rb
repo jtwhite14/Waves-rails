@@ -1,6 +1,7 @@
 # encoding: utf-8
 
 class SessionPhotoUploader < CarrierWave::Uploader::Base
+  include ::CarrierWave::Backgrounder::Delay
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
@@ -22,9 +23,9 @@ class SessionPhotoUploader < CarrierWave::Uploader::Base
 
   process :save_content_type_and_size_in_model
 
-  def save_content_type_and_size_in_model
-    self.file.instance_variable_set(:@content_type, "image/jpeg") 
-  end
+  # def save_content_type_and_size_in_model
+  #   self.file.instance_variable_set(:@content_type, "image/jpeg") 
+  # end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url
