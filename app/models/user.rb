@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
   has_many :sessions
 
   before_save :ensure_authentication_token!
+  mount_uploader :avatar, AvatarPhotoUploader
+  process_in_background :avatar
 
 
   def ensure_authentication_token!
