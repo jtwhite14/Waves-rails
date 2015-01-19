@@ -21,7 +21,7 @@ class SessionPhotoUploader < CarrierWave::Uploader::Base
     "#{Rails.root}/tmp/uploads"
   end
 
-  process :save_content_type_and_size_in_model
+  #process :save_content_type_and_size_in_model
 
   # def save_content_type_and_size_in_model
   #   self.file.instance_variable_set(:@content_type, "image/jpeg") 
