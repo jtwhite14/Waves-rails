@@ -28,6 +28,12 @@ class Api::V1::SessionsController < APIController
 		respond_with @session, location: api_v1_session_path(@session)
 	end
 
+	def destroy
+		session = current_user.sessions.find(params[:id])
+		@session.destroy!
+		render :json => { "message" => "ok" }, :status => 200
+	end
+
 private
 
 	def session_params
