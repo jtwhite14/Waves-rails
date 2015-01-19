@@ -29,7 +29,7 @@ class Api::V1::SessionsController < APIController
 	end
 
 	def destroy
-		session = current_user.sessions.find(params[:id])
+		@session = current_user.sessions.find(params[:id])
 		@session.destroy!
 		render :json => { "message" => "ok" }, :status => 200
 	end
