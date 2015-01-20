@@ -29,6 +29,8 @@ gem 'buoy_data', :github => 'CharlieWhite/buoy_data'
 gem 'counter_culture', '~> 0.1.23'
 gem 'carrierwave_backgrounder'
 gem 'sucker_punch', '~> 1.0'
+gem 'libxml-ruby'
+gem 'noaa', github: 'CharlieWhite/noaa'
 
 
 

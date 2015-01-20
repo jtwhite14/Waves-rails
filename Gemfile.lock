@@ -8,6 +8,14 @@ GIT
       jeweler
       nokogiri
 
+GIT
+  remote: git://github.com/CharlieWhite/noaa.git
+  revision: cbf0ec90e55cf22c9de5b8af9080b4bd1c1ae365
+  specs:
+    noaa (0.2.3)
+      geokit (>= 1.5.0)
+      nokogiri (>= 0.9.7)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -215,6 +223,7 @@ GEM
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     kgio (2.9.3)
+    libxml-ruby (2.8.0)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -354,8 +363,10 @@ DEPENDENCIES
   geokit-rails
   jquery-rails
   kaminari
+  libxml-ruby
   mini_magick
   newrelic_rpm
+  noaa!
   pg
   pry-rails
   pry-rescue
