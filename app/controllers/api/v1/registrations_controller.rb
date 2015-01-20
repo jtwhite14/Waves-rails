@@ -26,7 +26,7 @@ class Api::V1::RegistrationsController < APIController
 
 private
 	def registration_params
-    params[:registration].permit(:email, :name, :password)
+    params[:registration].permit(:email, :name, :password, :avatar)
   end
 
   def error_message message_hash
