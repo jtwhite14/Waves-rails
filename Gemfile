@@ -31,6 +31,7 @@ gem 'carrierwave_backgrounder'
 gem 'sucker_punch', '~> 1.0'
 gem 'libxml-ruby'
 gem 'noaa', github: 'CharlieWhite/noaa'
+gem 'noaa-tides', github: 'CharlieWhite/noaa-tides'
 
 
 
