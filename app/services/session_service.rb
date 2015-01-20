@@ -8,7 +8,7 @@ class SessionService
 		wave = Wave.find(params[:wave_id])
 
 		# Find the current observation data, TODO: move this to observations, and do a remote search if not found.
-		timestamp = DateTime.parse(params[:timestamp]
+		timestamp = DateTime.parse(params[:timestamp])
 
 		if ((timestamp.to_time + 30.minutes) > DateTime.now.to_time)
 			rounded_timestamp = (timestamp - 30.minutes).beginning_of_hour
