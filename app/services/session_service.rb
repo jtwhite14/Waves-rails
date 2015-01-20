@@ -8,7 +8,15 @@ class SessionService
 		wave = Wave.find(params[:wave_id])
 
 		# Find the current observation data, TODO: move this to observations, and do a remote search if not found.
-		rounded_timestamp = (DateTime.parse(params[:timestamp]) + 30.minutes).beginning_of_hour
+		timestamp = DateTime.parse(params[:timestamp]
+
+		if ((timestamp.to_time + 30.minutes) > DateTime.now.to_time)
+			rounded_timestamp = (timestamp - 30.minutes).beginning_of_hour
+		else
+			rounded_timestamp = (timestamp + 30.minutes).beginning_of_hour
+		end	
+
+		
 		observation = wave.buoy.observations.find_by(timestamp: rounded_timestamp)
 		unless observation
 			begin
