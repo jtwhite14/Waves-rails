@@ -29,12 +29,6 @@ class AvatarUploader < CarrierWave::Uploader::Base
      "#{secure_token}.#{file.extension}" if original_filename.present?
   end
 
-  before :cache, :reset_secure_token
-
-  def reset_secure_token(file)
-    model.image_secure_token = nil
-  end
-
   protected
   def secure_token
     var = :"@#{mounted_as}_secure_token"
