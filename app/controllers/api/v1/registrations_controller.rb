@@ -20,6 +20,7 @@ class Api::V1::RegistrationsController < APIController
 			return
 		else
 			warden.custom_failure!
+			Rails.logger.info user.errors.first
 			render :json=> error_message(user.errors.first), :status=>422
 		end
 	end
