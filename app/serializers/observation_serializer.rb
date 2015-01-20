@@ -11,6 +11,6 @@ class ObservationSerializer < ApplicationSerializer
   end
 
   def translate_metric_to_english value
-  	value * 3.9370
+  	value * 3.28084
   end
 end
