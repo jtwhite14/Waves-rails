@@ -12,7 +12,7 @@ gem 'pg'
 gem 'simple_form'
 gem 'carrierwave'
 gem 'active_model_serializers', '~> 0.8.0'
-gem "fog"
+gem "fog", "~>1.20", require: "fog/aws/storage"
 gem 'geokit'
 gem 'geokit-rails'
 gem 'sidekiq'
@@ -32,6 +32,7 @@ gem 'sucker_punch', '~> 1.0'
 gem 'libxml-ruby'
 gem 'noaa', github: 'CharlieWhite/noaa'
 gem 'noaa-tides', github: 'CharlieWhite/noaa-tides'
+gem 'asset_sync'
 
 
 
