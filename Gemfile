@@ -24,7 +24,6 @@ gem 'newrelic_rpm'
 gem 'kaminari'
 gem 'rails_12factor', group: :production
 gem 'rainbows'
-gem 'em-http-request'
 gem 'counter_culture', '~> 0.1.23'
 gem 'sucker_punch', '~> 1.0'
 gem 'carrierwave_backgrounder'
