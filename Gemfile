@@ -34,6 +34,7 @@ gem 'asset_sync'
 #gem "puma"
 gem 'passenger', '>= 4.0.42'
 gem 'sinatra', :require => nil
+gem 'cloudinary'
 
 
 
