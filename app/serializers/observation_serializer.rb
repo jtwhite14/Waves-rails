@@ -44,7 +44,7 @@ class ObservationSerializer < ApplicationSerializer
   end
 
   def log_tide_timestamp
-    DateTime.now
+    "2015-01-21T13:00:00.000Z"
   end
 
   def log_tide_value
