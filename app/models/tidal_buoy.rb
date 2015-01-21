@@ -6,14 +6,13 @@ class TidalBuoy < ActiveRecord::Base
 			begin
 				if (buoy.latitude)
 					puts buoy.inspect
-					# b = TidalBuoy.create(
-					# 	title: buoy[:title],
-					# 	station_id: buoy[:station_id],
-					# 	latitude: buoy[:lat],
-					# 	longitude: buoy[:lng]
-					# )
+					b = TidalBuoy.create(
+						title: buoy[:title],
+						station_id: buoy[:station_id],
+						latitude: buoy[:lat],
+						longitude: buoy[:lng]
+					)
 				end
-				
 			rescue
 				next
 			end
