@@ -15,7 +15,6 @@ gem 'active_model_serializers', '~> 0.8.0'
 gem "fog", "~>1.20", require: "fog/aws/storage"
 gem 'geokit'
 gem 'geokit-rails'
-gem 'sidekiq'
 gem "bugsnag"
 gem 'mini_magick'
 gem 'newrelic_rpm'
