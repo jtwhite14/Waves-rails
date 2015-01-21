@@ -23,7 +23,7 @@ class Api::V1::SessionsController < APIController
 
 	def upload
 		@session = current_user.sessions.find(params[:id])
-		@session.session_photo = session_params[:session_photo]
+		@session.session_photo = Cloudinary::Utils.signed_preloaded_image(session_params[:session_photo])
 		@session.save
 		respond_with @session, location: api_v1_session_path(@session)
 	end
