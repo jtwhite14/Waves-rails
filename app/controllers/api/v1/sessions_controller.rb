@@ -22,7 +22,7 @@ class Api::V1::SessionsController < APIController
 	end
 
 	def upload
-		@session = current_user.sessions.unscoped.find_by(guid: params[:id])
+		@session = Session.unscoped { current_user.sessions.find_by(guid: params[:id]) }
 		@session.session_photo = params[:session_photo]
 		@session.save
 		respond_with @session, location: api_v1_session_path(@session)
