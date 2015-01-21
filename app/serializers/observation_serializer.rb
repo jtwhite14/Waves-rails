@@ -2,8 +2,8 @@ class ObservationSerializer < ApplicationSerializer
   attributes :id, :timestamp, :wave_height, :swell_height, :swell_period, :wind_wave_height, :wind_wave_period
   attributes :swell_direction, :steepness, :average_wave_period, :mean_wave_direction
 
-  attributes :wind_speed, :wind_speed, :wind_direction, :mean_wind_direction, :air_temp, :water_temp, :log_tide_timestamp
-  attributes :log_tide_value, :first_low_value, :first_low_timestamp, :second_low_value, :second_low_timestamp
+  attributes :wind_speed, :wind_speed, :wind_direction, :mean_wind_direction, :air_temp, :water_temp, :wind_gusts
+  attributes :log_tide_timestamp, :log_tide_value, :first_low_value, :first_low_timestamp, :second_low_value, :second_low_timestamp
   attributes :first_high_value, :first_high_timestamp, :second_high_value, :second_high_timestamp
 
 
@@ -78,7 +78,7 @@ class ObservationSerializer < ApplicationSerializer
   def second_high_value
     3.8
   end
-  
+
   def second_high_timestamp
     "2015-01-21T13:00:00.000Z"
   end
