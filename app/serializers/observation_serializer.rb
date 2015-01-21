@@ -56,7 +56,7 @@ class ObservationSerializer < ApplicationSerializer
   end
 
   def first_low_timestamp
-    DateTime.now
+    "2015-01-21T13:00:00.000Z"
   end
 
   def second_low_value
@@ -64,7 +64,7 @@ class ObservationSerializer < ApplicationSerializer
   end
 
   def second_low_timestamp
-    DateTime.now
+    "2015-01-21T13:00:00.000Z"
   end
 
   def first_high_value
@@ -72,7 +72,7 @@ class ObservationSerializer < ApplicationSerializer
   end
 
   def first_high_timestamp
-    DateTime.now
+    "2015-01-21T13:00:00.000Z"
   end
 
   def second_high_value
@@ -80,7 +80,7 @@ class ObservationSerializer < ApplicationSerializer
   end
   
   def second_high_timestamp
-    DateTime.now
+    "2015-01-21T13:00:00.000Z"
   end
 
 
