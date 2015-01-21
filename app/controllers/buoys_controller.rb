@@ -69,6 +69,6 @@ class BuoysController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def buoy_params
-      params[:buoy]
+      params[:buoy].permit(:description)
     end
 end
