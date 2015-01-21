@@ -6,6 +6,6 @@ class SessionSerializer < ApplicationSerializer
 
 
   def photo_url
-  	object.session_photo.url
+  	object.session_photo.url ? object.session_photo.url : "" 
   end
 end
