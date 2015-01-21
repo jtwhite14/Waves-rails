@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: waves
+  api_key: '241245627491442'
+  api_secret: SstaqA-SHfm1rkNmrO7ipALx6qI
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: waves
+  api_key: '241245627491442'
+  api_secret: SstaqA-SHfm1rkNmrO7ipALx6qI
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: waves
+  api_key: '241245627491442'
+  api_secret: SstaqA-SHfm1rkNmrO7ipALx6qI
+  enhance_image_tag: true
+  static_image_support: false
