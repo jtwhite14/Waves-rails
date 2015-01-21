@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
 
   before_save :ensure_authentication_token!
   mount_uploader :avatar, AvatarUploader
-  process_in_background :avatar
+  #process_in_background :avatar
 
 
   def ensure_authentication_token!
