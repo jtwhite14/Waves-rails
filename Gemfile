@@ -32,7 +32,7 @@ gem 'noaa-tides', github: 'CharlieWhite/noaa-tides'
 gem 'buoy_data', :github => 'CharlieWhite/buoy_data'
 gem 'asset_sync'
 #gem "puma"
-gem 'passenger', '>= 4.0.42'
+gem 'passenger', github: 'phusion/passenger'
 
 
 
