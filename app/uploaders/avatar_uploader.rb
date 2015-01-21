@@ -1,8 +1,6 @@
 # encoding: utf-8
 
 class AvatarUploader < CarrierWave::Uploader::Base
-  include ::CarrierWave::Backgrounder::Delay
-
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   include CarrierWave::MiniMagick
@@ -21,7 +19,7 @@ class AvatarUploader < CarrierWave::Uploader::Base
     "#{Rails.root}/tmp/uploads"
   end
 
-  
+
 
   version :thumb do
     process :resize_to_fill => [90, 90]
