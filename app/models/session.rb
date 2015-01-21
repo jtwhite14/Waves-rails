@@ -5,7 +5,7 @@ class Session < ActiveRecord::Base
   counter_culture :wave
 
   mount_uploader :session_photo, SessionPhotoUploader
-  store_in_background :session_photo
+  process_in_background :session_photo
 
   default_scope { where(finalized: true) } 
 end
