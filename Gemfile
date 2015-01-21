@@ -21,12 +21,13 @@ gem 'mini_magick'
 gem 'newrelic_rpm'
 # gem "dalli"
 # gem "memcachier"
+gem 'sidekiq'
 gem 'kaminari'
 gem 'rails_12factor', group: :production
 gem 'rainbows'
 gem 'counter_culture', '~> 0.1.23'
 gem 'sucker_punch', '~> 1.0'
-#gem 'carrierwave_backgrounder'
+gem 'carrierwave_backgrounder'
 gem 'libxml-ruby'
 gem 'noaa-tides', github: 'CharlieWhite/noaa-tides'
 gem 'buoy_data', :github => 'CharlieWhite/buoy_data'
