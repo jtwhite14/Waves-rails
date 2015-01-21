@@ -27,7 +27,11 @@ Rails.application.routes.draw do
       	end
       end
       
-      resources :sessions
+      resources :sessions do
+        member do
+          post 'upload'
+        end
+      end
       resources :buoys
       resources :observations
     end

@@ -22,8 +22,8 @@ class Api::V1::SessionsController < APIController
 	end
 
 	def upload
-		@session = Session.unscoped { current_user.sessions.find_by(guid: params[:id]) }
-		@session.session_photo = params[:session_photo]
+		@session = current_user.sessions.find(params[:id]
+		@session.session_photo = session_params[:session_photo]
 		@session.save
 		respond_with @session, location: api_v1_session_path(@session)
 	end
@@ -37,6 +37,6 @@ class Api::V1::SessionsController < APIController
 private
 
 	def session_params
-		params[:session].permit(:latitude, :longitude, :timestamp, :notes, :rating, :session_photo, :wave_id, :guid)
+		params[:session].permit(:latitude, :longitude, :timestamp, :notes, :rating, :session_photo, :wave_id)
 	end
 end
