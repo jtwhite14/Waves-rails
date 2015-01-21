@@ -8,8 +8,8 @@ CarrierWave.configure do |config|
   }
   config.fog_directory  = ENV['FOG_DIRECTORY']                             # required
   config.fog_attributes = {'Cache-Control'=>'max-age=315576000'}  # optional, defaults to {}
-  config.asset_host = "http://#{config.fog_directory}.s3.amazonaws.com"
-
+  config.asset_host = "http://d9jfjr70cs741.cloudfront.net"
+  config.fog_public     = true
 
   # For testing, upload files to local `tmp` folder.
   if Rails.env.test? || Rails.env.cucumber?

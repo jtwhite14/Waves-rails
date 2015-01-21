@@ -26,12 +26,13 @@ gem 'rails_12factor', group: :production
 gem 'rainbows'
 gem 'em-http-request'
 gem 'counter_culture', '~> 0.1.23'
-gem 'carrierwave_backgrounder'
 gem 'sucker_punch', '~> 1.0'
+gem 'carrierwave_backgrounder'
 gem 'libxml-ruby'
 gem 'noaa-tides', github: 'CharlieWhite/noaa-tides'
 gem 'buoy_data', :github => 'CharlieWhite/buoy_data'
 gem 'asset_sync'
+gem 'puma'
 
 
 

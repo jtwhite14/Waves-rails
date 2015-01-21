@@ -5,7 +5,6 @@ class TidalBuoy < ActiveRecord::Base
 		buoy_list.get()[:stations].each do |buoy|
 			begin
 				if (buoy.latitude)
-					puts buoy.inspect
 					b = TidalBuoy.create(
 						title: buoy[:title],
 						station_id: buoy[:station_id],
