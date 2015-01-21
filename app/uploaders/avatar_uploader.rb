@@ -21,6 +21,8 @@ class AvatarUploader < CarrierWave::Uploader::Base
     "#{Rails.root}/tmp/uploads"
   end
 
+  
+
   version :thumb do
     process :resize_to_fill => [90, 90]
   end

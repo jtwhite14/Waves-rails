@@ -47,7 +47,11 @@ class SessionPhotoUploader < CarrierWave::Uploader::Base
   #   process :resize_to_fit => [50, 50]
   # end
 
-  version :map do
+  version :feed do
+    process :resize_to_fit => [600, 600]
+  end
+
+  version :map, :from_version => :feed do
     process :resize_to_fill => [116, 116]
   end
 
