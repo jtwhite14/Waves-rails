@@ -4,7 +4,7 @@ class TidalBuoy < ActiveRecord::Base
 		buoy_list = Noaa::Tides::NoaaStationList.new
 		buoy_list.get()[:stations].each do |buoy|
 			begin
-				if (buoy.latitude)
+				if (buoy[:latitude])
 					b = TidalBuoy.create(
 						title: buoy[:title],
 						station_id: buoy[:station_id],
