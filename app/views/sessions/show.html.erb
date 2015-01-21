@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'Edit', edit_session_path(@session) %> |
+<%= link_to 'Back', sessions_path %>
+
+url: <%= @session.session_photo.url %>
+
+<%= image_tag @session.session_photo.url %>
+
+<% if @session.wave %>
+
+<%= @session.wave.buoy.title %>
+<% if @session.observation %>
+<table>
+  <thead>
+    <tr>
+      <th>timestamp</th>
+      <th>wave_height</th>
+      <th>swell_height</th>
+      <th>swell_period</th>
+      <th>wind_wave_height</th>
+      <th>wind_wave_period</th>
+      <th>swell_direction</th>
+      <th>steepness</th>
+      <th>average_wave_period</th>
+      <th>mean_wave_direction</th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <td><%= @session.observation.timestamp %></td>
+        <td><%= @session.observation.wave_height %></td>
+        <td><%= @session.observation.swell_height %></td>
+        <td><%= @session.observation.swell_period %></td>
+        <td><%= @session.observation.wind_wave_height %></td>
+        <td><%= @session.observation.wind_wave_period %></td>
+        <td><%= @session.observation.swell_direction %></td>
+        <td><%= @session.observation.steepness %></td>
+        <td><%= @session.observation.average_wave_period %></td>
+        <td><%= @session.observation.mean_wave_direction %></td>
+      </tr>
+    
+  </tbody>
+</table>
+<% end %>
+<% end %>

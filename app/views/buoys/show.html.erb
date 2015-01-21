@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'Edit', edit_buoy_path(@buoy) %> |
+<%= link_to 'Back', buoys_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>timestamp</th>
+      <th>wave_height</th>
+      <th>swell_height</th>
+      <th>swell_period</th>
+      <th>wind_wave_height</th>
+      <th>wind_wave_period</th>
+      <th>swell_direction</th>
+      <th>steepness</th>
+      <th>average_wave_period</th>
+      <th>mean_wave_direction</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @buoy.observations.each do |o| %>
+      <tr>
+        <td><%= o.timestamp %></td>
+        <td><%= o.wave_height %></td>
+        <td><%= o.swell_height %></td>
+        <td><%= o.swell_period %></td>
+        <td><%= o.wind_wave_height %></td>
+        <td><%= o.wind_wave_period %></td>
+        <td><%= o.swell_direction %></td>
+        <td><%= o.steepness %></td>
+        <td><%= o.average_wave_period %></td>
+        <td><%= o.mean_wave_direction %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
