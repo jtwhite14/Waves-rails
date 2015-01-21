@@ -32,7 +32,7 @@ gem 'libxml-ruby'
 gem 'noaa-tides', github: 'CharlieWhite/noaa-tides'
 gem 'buoy_data', :github => 'CharlieWhite/buoy_data'
 gem 'asset_sync'
-gem "passenger", '~> 5.0.0.beta2'
+gem "passenger", github: 'phusion/passenger'
 
 
 
