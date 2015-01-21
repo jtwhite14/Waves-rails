@@ -17,14 +17,6 @@ GIT
       httparty
       nokogiri
 
-GIT
-  remote: git://github.com/CharlieWhite/noaa.git
-  revision: cbf0ec90e55cf22c9de5b8af9080b4bd1c1ae365
-  specs:
-    noaa (0.2.3)
-      geokit (>= 1.5.0)
-      nokogiri (>= 0.9.7)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -61,6 +53,10 @@ GEM
     after_commit_action (0.1.4)
       activerecord (>= 3.0.0)
     arel (5.0.1.20140414130214)
+    asset_sync (1.1.0)
+      activemodel
+      fog (>= 1.8.0)
+      unf
     bcrypt (3.1.9)
     better_errors (2.1.0)
       coderay (>= 1.0.0)
@@ -343,6 +339,9 @@ GEM
     uglifier (2.6.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.6)
     unicorn (4.8.3)
       kgio (~> 2.6)
       rack
@@ -355,6 +354,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers (~> 0.8.0)
+  asset_sync
   better_errors
   binding_of_caller
   bootstrap-sass
@@ -367,7 +367,7 @@ DEPENDENCIES
   devise
   em-http-request
   figaro (>= 1.0.0.rc1)
-  fog
+  fog (~> 1.20)
   geokit
   geokit-rails
   jquery-rails
@@ -375,7 +375,6 @@ DEPENDENCIES
   libxml-ruby
   mini_magick
   newrelic_rpm
-  noaa!
   noaa-tides!
   pg
   pry-rails
