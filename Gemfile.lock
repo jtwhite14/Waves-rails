@@ -261,6 +261,8 @@ GEM
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
     rack (1.5.2)
+    rack-protection (1.5.3)
+      rack
     rack-test (0.6.2)
       rack (>= 1.0)
     rails (4.1.4)
@@ -307,6 +309,10 @@ GEM
     simple_form (3.1.0)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
+    sinatra (1.4.5)
+      rack (~> 1.4)
+      rack-protection (~> 1.4)
+      tilt (~> 1.3, >= 1.3.4)
     slop (3.6.0)
     spring (1.2.0)
     sprockets (2.12.3)
@@ -380,6 +386,7 @@ DEPENDENCIES
   rainbows
   sidekiq
   simple_form
+  sinatra
   spring
   sucker_punch (~> 1.0)
   uglifier (>= 1.3.0)
