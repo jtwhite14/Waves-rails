@@ -65,7 +65,6 @@ class Observation < ActiveRecord::Base
         log_tide_value: tidal_observation.get_water_level["v"],
         log_tide_timestamp: DateTime.parse(tidal_observation.get_water_level["t"])
       )
-      Rails.logger.info observation.inspect
     end
 
     def self.import_weather_underground_observation buoy, observation
@@ -77,7 +76,6 @@ class Observation < ActiveRecord::Base
         wind_speed: result["current_observation"]["wind_kph"],
         wind_gusts: result["current_observation"]["wind_gust_kph"].to_f
       )
-      Rails.logger.info observation.inspect
     end
 
   
