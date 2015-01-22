@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150122145105) do
+ActiveRecord::Schema.define(version: 20150122151142) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,7 +66,7 @@ ActiveRecord::Schema.define(version: 20150122145105) do
     t.float    "air_temp"
     t.float    "water_temp"
     t.float    "log_tide_value"
-    t.datetime "log_time_timestamp"
+    t.datetime "log_tide_timestamp"
     t.float    "first_low_value"
     t.datetime "first_low_timestamp"
     t.float    "second_low_value"
