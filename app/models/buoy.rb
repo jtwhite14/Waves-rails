@@ -29,9 +29,13 @@ class Buoy < ActiveRecord::Base
 	def self.import_observations!
 		buoys = Buoy.all
 		buoys.each do |buoy|
-			puts buoy.title
-			Observation.import! buoy
-			puts buoy.current_observation.inspect
+			begin
+				puts buoy.title
+				Observation.import! buoy
+				puts buoy.current_observation.inspect
+			rescue
+		  	next
+		  end
 		end
 	end
 
