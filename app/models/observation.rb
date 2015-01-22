@@ -24,10 +24,10 @@ class Observation < ActiveRecord::Base
       		swell_direction: b.SwD,
       		steepness: b.STEEPNESS,
       		average_wave_period: b.APD,
-      		mean_wave_direction: b.MWD
+      		mean_wave_direction: b.MWD,
+          buoy: buoy
       	)
-        if observation.id
-          buoy.observations << observation
+        if observation.persisted?
           buoy.update_attribute(:current_observation_id, observation.id)
           Observation.import_tidal_buoy_observation(buoy.tidal_buoy, observation)
           Observation.import_weather_underground_observation(buoy, observation)
