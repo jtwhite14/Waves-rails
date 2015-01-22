@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150122133805) do
+ActiveRecord::Schema.define(version: 20150122145105) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -75,6 +75,7 @@ ActiveRecord::Schema.define(version: 20150122133805) do
     t.datetime "first_high_timestamp"
     t.float    "second_high_value"
     t.float    "second_high_timestamp"
+    t.integer  "wind_degrees"
   end
 
   add_index "observations", ["buoy_id"], name: "index_observations_on_buoy_id", using: :btree
@@ -109,6 +110,7 @@ ActiveRecord::Schema.define(version: 20150122133805) do
     t.float    "longitude"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "active",     default: false
   end
 
   create_table "users", force: true do |t|
