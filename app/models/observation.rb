@@ -73,7 +73,7 @@ class Observation < ActiveRecord::Base
       observation.update_attributes(
         air_temp: result["current_observation"]["temp_c"],
         wind_direction: result["current_observation"]["wind_dir"],
-        wind_degrees: result["current_observation"]["wind_degrees"],
+        mean_wind_direction: result["current_observation"]["wind_degrees"],
         wind_speed: result["current_observation"]["wind_kph"],
         wind_gusts: result["current_observation"]["wind_gust_kph"].to_f
       )
