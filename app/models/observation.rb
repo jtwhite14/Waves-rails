@@ -26,11 +26,10 @@ class Observation < ActiveRecord::Base
       		average_wave_period: b.APD,
       		mean_wave_direction: b.MWD
       	)
-        Observation.import_tidal_buoy_observation(buoy.tidal_buoy, observation)
-        Observation.import_weather_underground_observation(buoy, observation)
         buoy.observations << observation
         buoy.update_attribute(:current_observation_id, observation.id)
-      
+        Observation.import_tidal_buoy_observation(buoy.tidal_buoy, observation)
+        Observation.import_weather_underground_observation(buoy, observation)
     end
   end
 
