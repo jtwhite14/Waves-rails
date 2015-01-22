@@ -30,6 +30,7 @@ class Observation < ActiveRecord::Base
         buoy.update_attribute(:current_observation_id, observation.id)
         Observation.import_tidal_buoy_observation(buoy.tidal_buoy, observation)
         Observation.import_weather_underground_observation(buoy, observation)
+        observation
     end
   end
 
