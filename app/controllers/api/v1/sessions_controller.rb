@@ -39,6 +39,6 @@ class Api::V1::SessionsController < APIController
 private
 
 	def session_params
-		params[:session].permit(:latitude, :longitude, :timestamp, :notes, :rating, :session_photo, :wave_id)
+		params[:session].permit(:latitude, :longitude, :timestamp, :notes, :rating, session_photo: [], :wave_id)
 	end
 end
