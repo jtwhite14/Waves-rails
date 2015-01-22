@@ -14,16 +14,24 @@
 						<h1 class="tagline">An app for the <br>dedicated surfer.</h1>
 					</div>
 				</div>
-				<div class="row">
-					<div class="twelve columns" id ="hero-form">
+				<div class="row" id="hero-form">
+					<div class="form-column">
 						<!-- Begin MailChimp Signup Form -->
-							<form action="//explorewaves.us10.list-manage.com/subscribe/post?u=a8abdf3a7268e98d0359ac0d4&amp;id=c61b30d4ca" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-								<label for="mce-EMAIL" class="hero-label">Sign up for the beta:</label>
-								<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="name@email.com" required>
-							    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-							    <div style="position: absolute; left: -5000px;"><input type="text" name="b_a8abdf3a7268e98d0359ac0d4_c61b30d4ca" tabindex="-1" value=""></div>
-							    <input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" class="button">
-							</form>
+							<div class="row">
+								<form action="//explorewaves.us10.list-manage.com/subscribe/post?u=a8abdf3a7268e98d0359ac0d4&amp;id=c61b30d4ca" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+									<div class="four columns">
+										<label for="mce-EMAIL" class="hero-label">Sign up for the beta:</label>
+									</div>
+									<div class="four columns">
+										<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="name@email.com" required>
+									</div>
+								    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+								    <div style="position: absolute; left: -5000px;"><input type="text" name="b_a8abdf3a7268e98d0359ac0d4_c61b30d4ca" tabindex="-1" value=""></div>
+								    <div class="four columns">
+								    	<input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" class="button">
+								    </div>
+								</form>
+							</div>
 						<!--End mc_embed_signup--> 
 					</div>
 				</div>
@@ -37,30 +45,51 @@
 		<div class="body">
 			<div id="catalog">
 				<div class="row">
-					<div class="one-half column">
+					<div class="catalog-columns catalog-content">
 						<%= image_tag 'illustrations/catalog.png' %>
 						<h2>Catalog your spots &#38; sessions</h2>
-						<p class="big-type">Dial-in your local breaks, or go exploring off the beatean path. Waves helps you catalog your sessions so when there's a new swell you're able to compare your past logs with the current conditions. No more stressing that you didn't pick the right spot.</p>
+						<p class="big-type">Dial-in your local breaks, or go exploring off the beaten path. Waves helps you catalog your sessions so when there's a new swell you're able to compare your past logs with the current conditions. No more stressing that you didn't pick the right spot.</p>
 					</div>
-					<div class="one-half column">
+					<div class="catalog-columns catalog-img">
 						<%= image_tag 'phones.jpg' %>
 					</div>
 				</div>
-				<div class="row">
-					<div class="four columns">
+				<div class="row bullet-points">
+					<div class="bullet-columns">
 						<%= image_tag 'illustrations/picture.png' %>
 						<h3>Just take a picture</h3>
 						<p>Adding a new log to Waves is easy. Just take a picture before or after you surf and upload it to the app.</p>
 					</div>
-					<div class="four columns">
+					<div class="bullet-columns">
 						<%= image_tag 'illustrations/buoy.png' %>
 						<h3>Forget looking up conditions</h3>
 						<p>Using your photo’s location and date, Waves finds the closest buoy and automatically grabs the relevant data.</p>
 					</div>
-					<div class="four columns">
+					<div class="bullet-columns">
 						<%= image_tag 'illustrations/private.png' %>
 						<h3>Your data is private, seriously</h3>
 						<p>Your sessions and spots are kept completely private. Nothing you upload will be shared with anyone else.</p>
+					</div>
+				</div>
+				<div class="row" id="body-form">
+					<div class="form-column">
+						<!-- Begin MailChimp Signup Form -->
+							<div class="row">
+								<form action="//explorewaves.us10.list-manage.com/subscribe/post?u=a8abdf3a7268e98d0359ac0d4&amp;id=c61b30d4ca" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+									<div class="four columns">
+										<label for="mce-EMAIL" class="hero-label">Sign up for the beta:</label>
+									</div>
+									<div class="four columns">
+										<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="name@email.com" required>
+									</div>
+								    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+								    <div style="position: absolute; left: -5000px;"><input type="text" name="b_a8abdf3a7268e98d0359ac0d4_c61b30d4ca" tabindex="-1" value=""></div>
+								    <div class="four columns">
+								    	<input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" class="button">
+								    </div>
+								</form>
+							</div>
+						<!--End mc_embed_signup--> 
 					</div>
 				</div>
 			</div>
@@ -73,7 +102,7 @@
 					<%= image_tag 'logo.png' %>
 				</div>
 				<div class="four columns">
-					<p class="big-type">Instagram: <a href="">@waves_app</a></p>
+					<p class="big-type">Instagram: <a href="http://instagram.com/waves_app">@waves_app</a></p>
 				</div>
 				<div class="four columns">
 					<p class="big-type">Email: jt@explorewaves.com</p>

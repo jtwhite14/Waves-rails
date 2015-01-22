@@ -26,10 +26,6 @@ Hero
 
 #hero-headline {
 	padding-top: 25px;
-}
-
-#hero-headline,
-#hero-form {
 	text-align: center;
 }
 
@@ -39,20 +35,33 @@ Hero
 }
 
 #hero-form {
-	padding-top: 360px;
-	height: 50px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding-bottom: 25px;
 }
 
 .validate {
 	margin-bottom: 0;
-	height:100%;
 }
 
 .hero-label {
 	color: #FFF;
 	font-weight: 600;
-	padding-right: 20px;
 	font-size: 20px;
+	display: inline-block;
+	margin-top: 2px;
+	float: right;
+}
+
+.email {
+	display: inline-block;
+	margin-top: 2px;
+}
+
+.form-column {
+	width: 64%;
+	margin-left: 18%;
 }
 
 .hero-image {
@@ -60,13 +69,79 @@ Hero
 	width: 100%;
 	min-height: 589px;
 	background-size: 100%;
+	position: relative;
 	}
+
+.hero-pointer {
+	text-align: center;
+	padding-top: 15px;
+}
 
 /*=========================================
 Body
 =========================================== */
 
+.catalog-columns {
+	width: 42%;
+	margin-left: 8%;
+	float: left;
+	p {
+		color: #333;
+	}
+}
+
+.bullet-columns {
+	width: 28%;
+	margin-left: 8%;
+	float: left;
+	text-align: center;
+	h3 {
+		padding-top: 50px;
+	}
+}
+
+.bullet-columns:first-child {
+	margin-left: 0;
+}
+
+.catalog-content {
+	padding-top: 25px;
+	h2 {
+		padding-top: 25px;
+	}
+}
+
+.catalog-img {
+	text-align:center;
+}
+
+.bullet-points {
+	padding-top: 75px;
+}
+
+#body-form {
+	padding-top: 100px;
+	.hero-label {
+		color: #222;
+		font-weight: 400;
+	}
+}
 
 /*=========================================
 Footer
 =========================================== */
+
+.footer {
+	margin: 75px 0;
+	text-align: center;
+	.four.columns {
+		padding-top: 7px;
+	}
+	.four.columns:first-child {
+		padding-top: 0;
+	}
+	p {
+		font-size: 16px;
+		color: #333;
+	}
+}
