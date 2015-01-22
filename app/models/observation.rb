@@ -67,7 +67,7 @@ class Observation < ActiveRecord::Base
         log_tide_value: tidal_observation.get_water_level["v"],
         log_tide_timestamp: tidal_observation.get_water_level["v"],
       )
-
+      Rails.logger.info observation.inspect
     end
 
   end

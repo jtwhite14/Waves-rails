@@ -10,7 +10,7 @@ GIT
 
 GIT
   remote: git://github.com/CharlieWhite/noaa-tides.git
-  revision: f07de5ed6795d57a38832b5cda462300822e1784
+  revision: d0557a4e4c6c14bc1dd52600e0b4714300be9d56
   specs:
     noaa-tides (0.0.1)
       activesupport
