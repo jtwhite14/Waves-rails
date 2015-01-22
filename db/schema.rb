@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150121203007) do
+ActiveRecord::Schema.define(version: 20150122133805) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,7 +27,10 @@ ActiveRecord::Schema.define(version: 20150121203007) do
     t.string   "description",            default: ""
     t.string   "station_id"
     t.integer  "current_observation_id"
+    t.integer  "tidal_buoy_id"
   end
+
+  add_index "buoys", ["tidal_buoy_id"], name: "index_buoys_on_tidal_buoy_id", using: :btree
 
   create_table "friendly_id_slugs", force: true do |t|
     t.string   "slug",                      null: false
@@ -56,6 +59,22 @@ ActiveRecord::Schema.define(version: 20150121203007) do
     t.integer  "mean_wave_direction"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.float    "wind_speed"
+    t.float    "wind_gusts"
+    t.string   "wind_direction"
+    t.integer  "mean_wind_direction"
+    t.float    "air_temp"
+    t.float    "water_temp"
+    t.float    "log_tide_value"
+    t.datetime "log_time_timestamp"
+    t.float    "first_low_value"
+    t.datetime "first_low_timestamp"
+    t.float    "second_low_value"
+    t.datetime "second_low_timestamp"
+    t.float    "first_high_value"
+    t.datetime "first_high_timestamp"
+    t.float    "second_high_value"
+    t.float    "second_high_timestamp"
   end
 
   add_index "observations", ["buoy_id"], name: "index_observations_on_buoy_id", using: :btree
