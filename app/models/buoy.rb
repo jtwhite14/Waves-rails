@@ -3,6 +3,7 @@ class Buoy < ActiveRecord::Base
 
 	has_many :observations
 	belongs_to :current_observation, class_name: "Observation"
+	belongs_to :tidal_buoy
 
 	validates :station_id, uniqueness: true
 

@@ -1,6 +1,8 @@
 class TidalBuoy < ActiveRecord::Base
 	acts_as_mappable :default_units => :miles, :lat_column_name => :latitude, :lng_column_name => :longitude
 
+	has_one :buoy
+
 	validates :station_id, uniqueness: true
 
 	def self.import! buoy_id=nil
