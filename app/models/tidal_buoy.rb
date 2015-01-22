@@ -5,6 +5,8 @@ class TidalBuoy < ActiveRecord::Base
 
 	validates :station_id, uniqueness: true
 
+	default_scope { where(active: true) } 
+
 	def self.import! buoy_id=nil
 		buoy_list = Noaa::Tides::NoaaStationList.new
 		buoy_list.get()[:stations].each do |buoy|
