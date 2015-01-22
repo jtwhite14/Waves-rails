@@ -1,4 +1,4 @@
-class SessionsController < ApplicationController
+class WaveSessionsController < ApplicationController
   before_action :authenticate_admin!
   before_action :set_session, only: [:show, :edit, :update, :destroy]
 

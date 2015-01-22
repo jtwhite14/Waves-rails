@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
   root "home#index"
   
-  devise_for :admins, controllers: { sessions: "admin/sessions" }
+  devise_for :admins
   devise_for :users
   
   resources :buoys do
     resources :observations
   end
-  resources :sessions
+  resources :wave_sessions
 
 
   namespace :api, :defaults => {:format => :json} do
