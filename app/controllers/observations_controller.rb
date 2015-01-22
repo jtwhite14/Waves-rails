@@ -1,10 +1,12 @@
 class ObservationsController < ApplicationController
+  before_action :authenticate_admin!
+  before_action :set_buoy
   before_action :set_observation, only: [:show, :edit, :update, :destroy]
 
   # GET /observations
   # GET /observations.json
   def index
-    @observations = Observation.all
+    @observations = @buoy.observations.page(params[:page_id]).per(100)
   end
 
   # GET /observations/1
@@ -62,6 +64,10 @@ class ObservationsController < ApplicationController
   end
 
   private
+    def set_buoy
+      @buoy = Buoy.find(params[:buoy_id])
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_observation
       @observation = Observation.find(params[:id])

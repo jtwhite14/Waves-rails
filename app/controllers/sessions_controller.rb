@@ -1,12 +1,12 @@
 class SessionsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_admin!
   before_action :set_session, only: [:show, :edit, :update, :destroy]
 
 
   # GET /sessions
   # GET /sessions.json
   def index
-    @sessions = current_user.sessions.all
+    @sessions = Session.page(params[:page_id]).per(100)
 
     respond_to do |format|
       format.html # index.html.erb

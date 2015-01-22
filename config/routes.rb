@@ -1,10 +1,12 @@
-require 'sidekiq/web'
 Rails.application.routes.draw do
-  
   root "home#index"
-  mount Sidekiq::Web => '/sidekiq'
+  
+  devise_for :admins
   devise_for :users
-  resources :buoys
+  
+  resources :buoys do
+    resources :observations
+  end
   resources :sessions
 
 

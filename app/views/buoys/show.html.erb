@@ -20,19 +20,19 @@
   </thead>
 
   <tbody>
-    <% @buoy.observations.each do |o| %>
       <tr>
-        <td><%= o.timestamp %></td>
-        <td><%= o.wave_height %></td>
-        <td><%= o.swell_height %></td>
-        <td><%= o.swell_period %></td>
-        <td><%= o.wind_wave_height %></td>
-        <td><%= o.wind_wave_period %></td>
-        <td><%= o.swell_direction %></td>
-        <td><%= o.steepness %></td>
-        <td><%= o.average_wave_period %></td>
-        <td><%= o.mean_wave_direction %></td>
+        <td><%= @buoy.current_observation.timestamp %></td>
+        <td><%= @buoy.current_observation.wave_height %></td>
+        <td><%= @buoy.current_observation.swell_height %></td>
+        <td><%= @buoy.current_observation.swell_period %></td>
+        <td><%= @buoy.current_observation.wind_wave_height %></td>
+        <td><%= @buoy.current_observation.wind_wave_period %></td>
+        <td><%= @buoy.current_observation.swell_direction %></td>
+        <td><%= @buoy.current_observation.steepness %></td>
+        <td><%= @buoy.current_observation.average_wave_period %></td>
+        <td><%= @buoy.current_observation.mean_wave_direction %></td>
       </tr>
-    <% end %>
   </tbody>
 </table>
+
+<%= link_to 'all observations', buoy_observations_path(@buoy) %>

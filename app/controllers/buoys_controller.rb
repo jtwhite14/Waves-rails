@@ -1,4 +1,5 @@
 class BuoysController < ApplicationController
+  before_action :authenticate_admin!
   before_action :set_buoy, only: [:show, :edit, :update, :destroy]
 
   # GET /buoys
