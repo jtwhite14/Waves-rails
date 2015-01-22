@@ -1,4 +1,5 @@
 class Buoy < ActiveRecord::Base
+	extend Retryable
 	acts_as_mappable :default_units => :miles, :lat_column_name => :latitude, :lng_column_name => :longitude
 
 	has_many :observations
@@ -31,7 +32,9 @@ class Buoy < ActiveRecord::Base
 		buoys.each do |buoy|
 			begin
 				puts buoy.title
-				Observation.import! buoy
+				retryable(:tries => 3) do
+					Observation.import! buoy
+				end
 				puts buoy.current_observation.inspect
 			rescue
 		  	next
