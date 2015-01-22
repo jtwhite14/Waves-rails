@@ -26,13 +26,13 @@ class Observation < ActiveRecord::Base
       		average_wave_period: b.APD,
       		mean_wave_direction: b.MWD
       	)
-        Rails.logger.info observation.inspect
-        buoy.observations << observation
-        buoy.update_attribute(:current_observation_id, observation.id)
-        Observation.import_tidal_buoy_observation(buoy.tidal_buoy, observation)
-        Rails.logger.info observation.inspect
-        Observation.import_weather_underground_observation(buoy, observation)
-        Rails.logger.info observation.inspect
+        if observation.id
+          buoy.observations << observation
+          buoy.update_attribute(:current_observation_id, observation.id)
+          Observation.import_tidal_buoy_observation(buoy.tidal_buoy, observation)
+          Observation.import_weather_underground_observation(buoy, observation)
+        end
+        
         observation
     end
   end
