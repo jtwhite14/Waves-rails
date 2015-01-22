@@ -2,6 +2,7 @@
 <br />
 <% @sessions.each do |session| %>
   <%= image_tag session.session_photo.feed.url %> <br />
+  User: <%= session.wave.user.name %>
   Rating: <%= session.rating %> <br />
   Comments: <%= session.notes %> <br />
 <hr />     
