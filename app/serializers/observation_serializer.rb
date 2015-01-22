@@ -8,80 +8,61 @@ class ObservationSerializer < ApplicationSerializer
 
 
   def wave_height
-  	translate_metric_to_english(object.wave_height)
+  	translate_meters_to_feet(object.wave_height)
   end
 
   def swell_height
-  	translate_metric_to_english(object.swell_height)
-  end
-
-  def translate_metric_to_english value
-  	value * 3.28084
+  	translate_meters_to_feet(object.swell_height)
   end
 
   def wind_speed
-    5.8
+    kph_to_mph(object.wind_speed)
   end
 
   def wind_gusts
-    5.9
-  end
-
-  def wind_direction
-    "SW"
-  end
-
-  def mean_wind_direction
-    238
+    kph_to_mph(object.wind_gusts)
   end
 
   def air_temp
-    78
+    c_to_f(object.air_temp)
   end
 
   def water_temp
-    76
-  end
-
-  def log_tide_timestamp
-    "2015-01-21T13:00:00.000Z"
+    c_to_f(object.water_temp)
   end
 
   def log_tide_value
-    2.3
+    translate_meters_to_feet(object.log_tide_value)
   end
 
   def first_low_value
-    1.2
-  end
-
-  def first_low_timestamp
-    "2015-01-21T13:00:00.000Z"
+    translate_meters_to_feet(object.first_low_value)
   end
 
   def second_low_value
-    1.4
+    translate_meters_to_feet(object.second_low_value)
   end
-
-  def second_low_timestamp
-    "2015-01-21T13:00:00.000Z"
-  end
-
+  
   def first_high_value
-    3.6
-  end
-
-  def first_high_timestamp
-    "2015-01-21T13:00:00.000Z"
+    translate_meters_to_feet(object.first_high_value)
   end
 
   def second_high_value
-    3.8
+    translate_meters_to_feet(object.second_high_value)
   end
 
-  def second_high_timestamp
-    "2015-01-21T13:00:00.000Z"
+  def translate_meters_to_feet value
+    value ? (value * 3.28084) : nil
   end
+
+  def kph_to_mph value
+    value ? (value * 0.621371) : nil
+  end
+
+  def c_to_f value
+    value ? ((value * 9/5) + 32) : nil
+  end
+
 
 
 end
