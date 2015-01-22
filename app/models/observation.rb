@@ -26,6 +26,7 @@ class Observation < ActiveRecord::Base
       		average_wave_period: b.APD,
       		mean_wave_direction: b.MWD
       	)
+        Observation.import_tidal_buoy_observation buoy.tidal_buoy, observation
         buoy.observations << observation
         buoy.update_attribute(:current_observation_id, observation.id)
       
@@ -37,7 +38,7 @@ class Observation < ActiveRecord::Base
   	h.get_all(:json).each do |b|
   		begin
 	  		b = JSON.parse(b)
-	  		buoy.observations << Observation.create(
+	  		observation = buoy.observations << Observation.create(
 		  		timestamp: DateTime.new(b["YY"].to_i, b["MM"].to_i, b["DD"].to_i, b["hh"].to_i, 0, 0),
 		  		wave_height: b["WVHT"],
 		  		swell_height: b["SwH"],
@@ -49,13 +50,14 @@ class Observation < ActiveRecord::Base
 		  		average_wave_period: b["APD"],
 		  		mean_wave_direction: b["MWD"]
 		  	)
+        Observation.import_tidal_buoy_observation buoy.tidal_buoy, observation
 		  rescue
 		  	next
 		  end
 		end
 
     def self.import_tidal_buoy_observation tidal_buoy, observation
-      tidal_observation = Noaa::Tides::NoaaStationObservation(tidal_buoy.station_id, observation.timestamp)
+      tidal_observation = Noaa::Tides::NoaaStationObservation.new(tidal_buoy.station_id, observation.timestamp)
       observation.update_attributes(
         air_temperature: tidal_observation.get_air_temperature["v"],
         water_temperature: tidal_observation.get_water_temperature["v"],
