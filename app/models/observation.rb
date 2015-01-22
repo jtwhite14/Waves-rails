@@ -59,13 +59,13 @@ class Observation < ActiveRecord::Base
     def self.import_tidal_buoy_observation tidal_buoy, observation
       tidal_observation = Noaa::Tides::NoaaStationObservation.new(tidal_buoy.station_id, observation.timestamp)
       observation.update_attributes(
-        air_temperature: tidal_observation.get_air_temperature["v"],
-        water_temperature: tidal_observation.get_water_temperature["v"],
-        wind_direction: tidal_observation.get_wind["v"],
-        wind_speed: tidal_observation.get_wind["v"],
-        wind_gusts: tidal_observation.get_wind["v"],
+        # air_temperature: tidal_observation.get_air_temperature["v"],
+        # water_temperature: tidal_observation.get_water_temperature["v"],
+        # wind_direction: tidal_observation.get_wind["v"],
+        # wind_speed: tidal_observation.get_wind["v"],
+        # wind_gusts: tidal_observation.get_wind["v"],
         log_tide_value: tidal_observation.get_water_level["v"],
-        log_tide_timestamp: tidal_observation.get_water_level["v"],
+        log_tide_timestamp: DateTime.parse(tidal_observation.get_water_level["t"])
       )
       Rails.logger.info observation.inspect
     end
