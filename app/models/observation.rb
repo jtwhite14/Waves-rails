@@ -26,8 +26,8 @@ class Observation < ActiveRecord::Base
       		average_wave_period: b.APD,
       		mean_wave_direction: b.MWD
       	)
-        self.import_tidal_buoy_observation(buoy.tidal_buoy, observation)
-        self.import_weather_underground_observation(buoy, observation)
+        Observation.import_tidal_buoy_observation(buoy.tidal_buoy, observation)
+        Observation.import_weather_underground_observation(buoy, observation)
         buoy.observations << observation
         buoy.update_attribute(:current_observation_id, observation.id)
       
@@ -56,6 +56,7 @@ class Observation < ActiveRecord::Base
 		  	next
 		  end
 		end
+  end
 
     def self.import_tidal_buoy_observation tidal_buoy, observation
       tidal_observation = Noaa::Tides::NoaaStationObservation.new(tidal_buoy.station_id, observation.timestamp)
@@ -79,5 +80,5 @@ class Observation < ActiveRecord::Base
       Rails.logger.info observation.inspect
     end
 
-  end
+  
 end
