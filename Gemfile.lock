@@ -193,6 +193,7 @@ GEM
       multi_json (>= 1.7.5, < 2.0)
       nokogiri (~> 1.6.3)
       oauth2
+    google-analytics-rails (0.0.6)
     hashie (3.3.2)
     highline (1.6.21)
     hike (1.2.3)
@@ -376,6 +377,7 @@ DEPENDENCIES
   fog (~> 1.20)
   geokit
   geokit-rails
+  google-analytics-rails
   jquery-rails
   kaminari
   libxml-ruby

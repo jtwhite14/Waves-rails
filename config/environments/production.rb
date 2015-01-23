@@ -61,6 +61,7 @@ Rails.application.configure do
   #   #config.cache_store = :redis_store, uri.host, { port: uri.port, username: uri.user, password: uri.password }
   # end
   config.action_controller.asset_host = "//#{ENV['FOG_DIRECTORY']}.s3.amazonaws.com"
+  GA.tracker = "UA-58902005-1"
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.action_controller.asset_host = "http://assets.example.com"
