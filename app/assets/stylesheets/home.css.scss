@@ -77,6 +77,39 @@ Hero
 	padding-top: 15px;
 }
 
+@media (max-width: 550px) {
+	.hero-image {
+		background: none;
+		min-height: 0;
+	}
+	#hero-form {
+		padding-top: 25px;
+		position: relative;
+		bottom: 0;
+		width: 100%;
+		padding-bottom: 0;
+		text-align: center;
+		.button {
+			margin-left: 0;
+		}
+	}
+	.form-column {
+		width: 100%;
+		margin-left: 0;
+	}
+	.hero-label {
+		float: none;
+		color: #222;
+	}
+	.hero-pointer {
+		display: none;
+	}
+	hr {
+		display: none;
+	}
+}
+
+
 /*=========================================
 Body
 =========================================== */
@@ -127,6 +160,12 @@ Body
 	}
 }
 
+@media (max-width: 550px) {
+	.body {
+		display: none;
+	}
+}
+
 /*=========================================
 Footer
 =========================================== */
@@ -143,5 +182,11 @@ Footer
 	p {
 		font-size: 16px;
 		color: #333;
+	}
+}
+
+@media (max-width: 550px) {
+	.footer {
+		display: none;
 	}
 }
