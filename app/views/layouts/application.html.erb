@@ -8,6 +8,7 @@
  <link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700|Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <%= analytics_init if Rails.env.production? %>
   <%= csrf_meta_tags %>
 </head>
 <body>
