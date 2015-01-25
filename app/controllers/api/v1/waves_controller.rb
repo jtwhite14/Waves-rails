@@ -11,6 +11,9 @@ class Api::V1::WavesController < APIController
 
 	def show
 		@wave = current_user.waves.includes(sessions: :observation).find(params[:id])
+		if (params[:latitude] && params[:longitude])
+			@wave = DistanceCollection.new([@wave]).set_distance_from([params[:latitude], params[:longitude]]).first
+		end
 		respond_with @wave, serializer: WaveDetailSerializer, root: :wave
 	end
 
