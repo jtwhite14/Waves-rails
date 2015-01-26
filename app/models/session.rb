@@ -5,7 +5,4 @@ class Session < ActiveRecord::Base
   counter_culture :wave
 	mount_uploader :session_photo, SessionPhotoUploader
   
-  default_scope { where(finalized: true) } 
-
-  validates :wave, :presence => true
 end
