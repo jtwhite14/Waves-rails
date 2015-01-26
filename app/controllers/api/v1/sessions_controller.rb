@@ -11,7 +11,7 @@ class Api::V1::SessionsController < APIController
 	end
 
 	def create
-		@session = current_user.sessions.create(finalized: false)
+		@session = current_user.sessions.create({finalized: false})
 		respond_with @session, location: api_v1_session_path(@session)
 	end
 
