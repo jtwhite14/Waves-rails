@@ -11,18 +11,18 @@ class Api::V1::SessionsController < APIController
 	end
 
 	def create
-		@session = current_user.sessions.create
+		@session = current_user.sessions.create(finalized: false)
 		respond_with @session, location: api_v1_session_path(@session)
 	end
 
 	def update
-		session = current_user.sessions.find(params[:id])
+		session = Session.unscoped { current_user.sessions.find(params[:id]) }
 		@session = SessionService.new(session).finalize! session_params
 		respond_with @session, location: api_v1_session_path(@session)
 	end
 
 	def upload
-		@session = current_user.sessions.find(params[:id])
+		@session = Session.unscoped { current_user.sessions.find(params[:id]) }
 		@session.session_photo = Cloudinary::Utils.signed_preloaded_image(params[:session_photo])
 		@session.save
 		respond_with @session, location: api_v1_session_path(@session)
