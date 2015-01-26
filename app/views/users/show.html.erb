@@ -22,7 +22,7 @@
   </tbody>
 </table>
 
-<% @user.sessions.each do |session| %>
+<% @user.sessions.where(finalized: true).each do |session| %>
   <%= image_tag session.session_photo.feed.url %> <br />
   Wave: <%= session.wave.slug %> <br />
   Rating: <%= session.rating %> <br />
