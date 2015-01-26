@@ -1,19 +1,6 @@
 Rails.application.routes.draw do
-  get 'users/index'
-
-  get 'users/show'
-
   root "home#index"
   
-  devise_for :admins
-  devise_for :users
-  
-  resources :buoys do
-    resources :observations
-  end
-  resources :wave_sessions
-
-
   namespace :api, :defaults => {:format => :json} do
     namespace :v1 do
       devise_scope :user do
@@ -43,4 +30,12 @@ Rails.application.routes.draw do
       resources :observations
     end
   end
+
+  # Admin views
+  devise_for :admins
+  resources :buoys do
+    resources :observations
+  end
+  resources :wave_sessions
+  resources :users
 end
