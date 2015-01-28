@@ -10,8 +10,8 @@ class Api::V1::WavesController < APIController
 	end
 
 	def show
-		@wave = current_user.waves.find(params[:id])
-		respond_with @wave
+		@wave = current_user.waves.includes(sessions: :observation).find(params[:id])
+		respond_with @wave, serializer: WaveDetailSerializer, root: :wave
 	end
 
 	def sessions

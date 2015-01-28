@@ -1,5 +1,4 @@
-class ObservationsController < ApplicationController
-  before_action :authenticate_admin!
+class ObservationsController < AdminController
   before_action :set_buoy
   before_action :set_observation, only: [:show, :edit, :update, :destroy]
 
