@@ -1,4 +1,6 @@
-<%= link_to 'buoys', buoys_path %> | <%= link_to 'sessions', wave_sessions_path %> 
+<%= link_to 'users', users_path %> | 
+<%= link_to 'buoys', buoys_path %> | 
+<%= link_to 'sessions', wave_sessions_path %> 
 <br />
 <% @sessions.each do |session| %>
   <%= image_tag session.session_photo.feed.url %> <br />

@@ -6,7 +6,7 @@ class WaveSessionsController < AdminController
   # GET /sessions
   # GET /sessions.json
   def index
-    @sessions = Session.page(params[:page_id]).per(100)
+    @sessions = Session.where(finalized: true).page(params[:page_id]).per(100)
 
     respond_to do |format|
       format.html # index.html.erb

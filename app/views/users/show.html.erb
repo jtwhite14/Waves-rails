@@ -1,2 +1,32 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<%= link_to 'back', users_path %>
+
+<br />
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Waves</th>
+      <th>Sessions</th>
+      <th>Last Signed In</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+        <td><%= @user.name %></td>
+        <td><%= @user.waves.count %></td>
+        <td><%= @user.sessions.count %></td>
+        <td><%= @user.last_sign_in_at %><td>
+        <td><%= link_to 'Show', @user %></td>
+      </tr>
+  </tbody>
+</table>
+
+<% @user.sessions.where(finalized: true).each do |session| %>
+  <%= image_tag session.session_photo.feed.url %> <br />
+  Wave: <%= session.wave.slug %> <br />
+  Rating: <%= session.rating %> <br />
+  Comments: <%= session.notes %> <br />
+<hr />     
+<% end %>
+
