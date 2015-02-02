@@ -42,36 +42,51 @@
 			<div class="hero-pointer">
 				<%= image_tag 'scroll.png' %>
 			</div>
-			<hr>
 		</div>
 
 		<div class="body">
 			<div id="catalog">
 				<div class="row">
-					<div class="catalog-columns catalog-content">
-						<%= image_tag 'illustrations/catalog.png' %>
-						<h2>Catalog your spots &#38; sessions</h2>
-						<p class="big-type">Dial-in your local breaks, or go exploring off the beaten path. Waves helps you catalog your sessions so when there's a new swell you're able to compare your past logs with the current conditions. No more stressing that you didn't pick the right spot.</p>
+					<div class="catalog-columns main-content">
+						<%= image_tag 'illustrations/catalog-2.png' %>
+						<h2>A smarter surf journal</h2>
+						<p class="big-type">Dial in your local spots or explore off the beatean path. Waves makes it easy you track all your surf spots and sessions. When there's a new swell, use Waves to go back to your old logs and compare them with the new conditions. You’ll end up surfing better waves, more often.</p>
 					</div>
 					<div class="catalog-columns catalog-img">
-						<%= image_tag 'phones.jpg' %>
+						<%= image_tag 'phone-img1.jpg' %>
 					</div>
 				</div>
 				<div class="row bullet-points">
-					<div class="bullet-columns">
-						<%= image_tag 'illustrations/picture.png' %>
-						<h3>Just take a picture</h3>
-						<p>Adding a new log to Waves is easy. Just take a picture before or after you surf and upload it to the app.</p>
+					<div class="row center">
+						<h2>How it works:</h2>
 					</div>
-					<div class="bullet-columns">
-						<%= image_tag 'illustrations/buoy.png' %>
-						<h3>Forget looking up conditions</h3>
-						<p>Using your photo’s location and date, Waves finds the closest buoy and automatically grabs the relevant data.</p>
+					<div class="row">
+						<div class="bullet-columns">
+							<%= image_tag 'illustrations/picture.png' %>
+							<h3>Just take a picture</h3>
+							<p>Adding a new log to Waves is easy. Just take a picture before or after you surf and upload it to the app.</p>
+						</div>
+						<div class="bullet-columns">
+							<%= image_tag 'illustrations/buoy.png' %>
+							<h3>Forget looking up conditions</h3>
+							<p>Using your photo’s location and date, Waves finds the closest buoy and automatically grabs the relevant data.</p>
+						</div>
+						<div class="bullet-columns">
+							<%= image_tag 'illustrations/private.png' %>
+							<h3>Your data is private, seriously</h3>
+							<p>Your sessions and spots are kept completely private. Nothing you upload will be shared with anyone else.</p>
+						</div>
 					</div>
-					<div class="bullet-columns">
-						<%= image_tag 'illustrations/private.png' %>
-						<h3>Your data is private, seriously</h3>
-						<p>Your sessions and spots are kept completely private. Nothing you upload will be shared with anyone else.</p>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="catalog-columns catalog-img">
+						<%= image_tag 'phone-img2.jpg' %>
+					</div>
+					<div class="catalog-columns main-content">
+						<%= image_tag 'illustrations/buoy-reports.png' %>
+						<h2>Buoys reports... fast and easy.</h2>
+						<p class="big-type">Whether you're sitting in bed before sunrise or waiting in your truck for the tide to drop, Waves is the fastest and easiest way to check current buoy reports from your phone. Seriously, it's so much better than NOAA’s website.</p>
 					</div>
 				</div>
 				<div class="row" id="body-form">
@@ -99,22 +114,34 @@
 					</div>
 				</div>
 			</div>
-			<hr>
-		</div>
-
-		<div class="footer">
-			<div class="row">
-				<div class="four columns">
-					<%= image_tag 'logo.png' %>
-				</div>
-				<div class="four columns">
-					<p class="big-type">Instagram: <a href="http://instagram.com/waves_app">@waves_app</a></p>
-				</div>
-				<div class="four columns">
-					<p class="big-type">Email: jt@explorewaves.com</p>
-				</div>
-			</div>
 		</div>
 
 	</div>
+	<footer class="site-footer">
+
+		  <div class="container">
+		    <div class="footer-col-wrapper">
+		      <div class="footer-col  footer-col-1">
+		        <ul class="social-media-list">
+		          <li><%= image_tag 'logo.png' %></li>
+		        </ul>
+		      </div>
+
+		      <div class="footer-col  footer-col-2">
+		        <ul class="contact-list">
+		          <li>email: <span class="email">jt@explorewaves.com</span></li>
+		          <li>blog: <a href="https://blog.explorewaves.com">blog.explorewaves.com</a></li>
+		          <li>instagram: <a href="https://instagram.com/waves_app">@waves_app</a></li>
+		          <li>twitter: <a href="https://twitter.com/waves_app">@waves_app</a></li>
+		        </ul>
+		      </div>
+
+		      <div class="footer-col  footer-col-3">
+		        <p class="text">Dial in your local spots or explore off the beatean path. Waves helps you track all your surf sessions and spots. Welcome to the surf journal of the future.</p>
+		      </div>
+		    </div>
+
+		  </div>
+
+		</footer>
 </div>

@@ -1,4 +1,4 @@
-/*=========================================
+cata/*=========================================
 Reset
 =========================================== */
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0} 
@@ -155,19 +155,15 @@ Body
 	margin-left: 0;
 }
 
-.catalog-content {
+.main-content {
 	padding-top: 25px;
 	h2 {
-		padding-top: 25px;
+		padding: 25px 0 40px;
 	}
 }
 
-.catalog-img {
-	text-align:center;
-}
-
 .bullet-points {
-	padding-top: 75px;
+	padding: 75px 0 100px 0;
 }
 
 #body-form {
@@ -179,7 +175,7 @@ Body
 }
 
 @media (max-width: 550px) {
-	.catalog-content,
+	.main-content,
 	.bullet-points {
 		display: none;
 	}
@@ -228,19 +224,82 @@ Body
 Footer
 =========================================== */
 
-.footer {
-	margin: 75px 0;
-	text-align: center;
-	.four.columns {
-		padding-top: 7px;
-	}
-	.four.columns:first-child {
-		padding-top: 0;
-	}
-	p {
-		font-size: 16px;
-		color: #333;
-	}
+/**
+ * Site footer
+ */
+
+ .site-footer {
+border-top: 2px solid #E3E4EC;
+padding: 50px 0;
+margin-top: 100px;
+}
+
+ .email {
+  color: #00B4FF;
+}
+
+.site-footer {
+    border-top: 2px solid #E3E4EC;
+    padding: 50px 0;
+}
+
+.footer-heading {
+    font-size: 18px;
+    margin-bottom: 50px / 2;
+}
+
+.contact-list,
+.social-media-list {
+    list-style: none;
+    margin-left: 0;
+}
+
+.footer-col-wrapper {
+    font-size: 15px;
+    color: #919496;
+    margin-left: -50px / 2;
+}
+
+.footer-col {
+    float: left;
+    margin-bottom: 50px / 2;
+    padding-left: 50px / 2;
+}
+
+.footer-col-1 {
+    width: -webkit-calc(25% - (#{50px} / 2));
+    width:         calc(25% - (#{50px} / 2));
+}
+
+.footer-col-2 {
+    width: -webkit-calc(25% - (#{50px} / 2));
+    width:         calc(25% - (#{50px} / 2));
+}
+
+.footer-col-3 {
+    width: -webkit-calc(50% - (#{50px} / 2));
+    width:         calc(50% - (#{50px} / 2));
+}
+
+@media (max-width: 1180px) {
+    .footer-col-1,
+    .footer-col-2 {
+        width: -webkit-calc(50% - (#{50px} / 2));
+        width:         calc(50% - (#{50px} / 2));
+    }
+
+    .footer-col-3 {
+        width: -webkit-calc(100% - (#{50px} / 2));
+        width:         calc(100% - (#{50px} / 2));
+    }
+}
+
+@media (max-width: 550px) {
+    .footer-col {
+        float: none;
+        width: -webkit-calc(100% - (#{50px} / 2));
+        width:         calc(100% - (#{50px} / 2));
+    }
 }
 
 @media (max-width: 550px) {
