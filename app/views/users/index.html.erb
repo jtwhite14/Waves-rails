@@ -6,9 +6,12 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Email</th>
       <th>Waves</th>
       <th>Sessions</th>
+      <th>First Signed In</th>
       <th>Last Signed In</th>
+      <th>Sign In Count</th>
     </tr>
   </thead>
 
@@ -16,9 +19,12 @@
     <% @users.each do |user| %>
       <tr>
         <td><%= user.name %></td>
+        <td><%= user.email %></td>
         <td><%= user.waves.count %></td>
-        <td><%= user.sessions.count %></td>
+        <td><%= user.sessions.where(finalized: true).count %></td>
+        <td><%= user.created_at %><td>
         <td><%= user.last_sign_in_at %><td>
+        <td><%= user.sign_in_count %><td>
         <td><%= link_to 'Show', user %></td>
       </tr>
     <% end %>
