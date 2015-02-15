@@ -25,8 +25,8 @@ Count: <%= @users.count %>
         <td><%= user.email %></td>
         <td><%= user.waves.count %></td>
         <td><%= user.sessions.where(finalized: true).count %></td>
-        <td><%= user.created_at.strftime('%d-%m-%Y') %><td>
-        <td><%= user.last_sign_in_at.strftime('%d-%m-%Y') %><td>
+        <td><%= user.created_at.strftime('%d-%m-%Y') %></td>
+        <td><%= user.last_sign_in_at.strftime('%d-%m-%Y') %></td>
         <td><%= user.sign_in_count %><td>
         <td><%= link_to 'Show', user %></td>
       </tr>
