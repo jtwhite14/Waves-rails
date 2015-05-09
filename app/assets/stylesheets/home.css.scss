@@ -38,7 +38,7 @@ Hero
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	padding-bottom: 25px;
+	padding-bottom: 8px;
 }
 
 .validate {
@@ -86,6 +86,11 @@ Hero
 	padding-top: 15px;
 }
 
+.form-label {
+	text-align: center;
+	padding-bottom: 10px;
+}
+
 @media (max-width: 550px) {
 	.hero-image {
 		background: none;
@@ -94,34 +99,6 @@ Hero
 	#hero-form {
 		display: none;
 	}
-	// 	padding-top: 25px;
-	// 	position: relative;
-	// 	bottom: 0;
-	// 	width: 100%;
-	// 	padding-bottom: 0;
-	// 	text-align: center;
-	// 	.button {
-	// 		margin-left: 0;
-	// 	}
-	// }
-	// .form-column {
-	// 	width: 100%;
-	// 	margin-left: 0;
-	// }
-	// .form-columns {
-	// 	width: 100%;
-	// 	margin-left: 0;
-	// }
-	// .form-columns:first-child {
-	// margin-left: 0;
-	// }
-	// .hero-label {
-	// 	float: none;
-	// 	color: #222;
-	// }
-	// .hero-pointer {
-	// 	display: none;
-	// }
 	hr {
 		display: none;
 	}
