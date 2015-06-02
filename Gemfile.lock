@@ -43,6 +43,7 @@ GEM
     after_commit_action (1.0.0)
       activerecord (>= 3.0.0)
       activesupport (>= 3.0.0)
+    apns (1.0.0)
     arel (5.0.1.20140414130214)
     asset_sync (1.1.0)
       activemodel
@@ -346,6 +347,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers (~> 0.8.0)
+  apns
   asset_sync
   better_errors
   binding_of_caller
