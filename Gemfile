@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.4'
+ruby '2.2.1'
 gem 'rails', '4.1.4'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
@@ -29,13 +29,14 @@ gem 'sucker_punch', '~> 1.0'
 gem 'carrierwave_backgrounder'
 gem 'libxml-ruby'
 gem 'noaa-tides', github: 'CharlieWhite/noaa-tides'
-gem 'buoy_data', :github => 'CharlieWhite/buoy_data'
+#gem 'buoy_data', :github => 'CharlieWhite/buoy_data'
 gem 'asset_sync'
 #gem "puma"
 gem 'passenger', '>= 4.0.42'
 gem 'cloudinary'
 gem 'wunderground'
 gem 'google-analytics-rails'
+gem "apns"
 
 
 

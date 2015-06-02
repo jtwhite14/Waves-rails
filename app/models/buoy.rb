@@ -10,7 +10,7 @@ class Buoy < ActiveRecord::Base
 
 
 
-	def self.import! buoy_id=nil
+	def self.import! buoy_id=nil # gets all buoys. Needs curration. BE CAREFUL
 		buoy_list = BuoyData::NoaaBuoyList.new
 		buoy_list.get({id: buoy_id})[:stations].each do |buoy|
 			begin
@@ -27,7 +27,12 @@ class Buoy < ActiveRecord::Base
 		end
 	end
 
-	def self.import_observations!
+	def self.import_observations! 
+		#import current obversa for each buoy
+		# heroku run simple cron jobs for each buoy
+		# this runs each hour and grabs all info for each buoy
+		# heroku scheduler 
+		# rake file for custome jobs
 		buoys = Buoy.all
 		buoys.each do |buoy|
 			begin

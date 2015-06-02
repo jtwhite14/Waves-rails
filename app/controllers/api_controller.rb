@@ -2,6 +2,9 @@ class APIController < ApplicationController
   respond_to :json
   protect_from_forgery with: :null_session
 
+  # all controllers inherit from this
+  # very mobile app request his before filter and will sign in user
+  # 
   before_filter :authenticate_user_from_token!, :except => [:page_not_found]
   before_filter :authenticate_user!
 
