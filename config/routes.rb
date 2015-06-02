@@ -30,6 +30,7 @@ Rails.application.routes.draw do
       end
       resources :buoys
       resources :observations
+      resources :alerts
     end
   end
 
@@ -40,4 +41,5 @@ Rails.application.routes.draw do
   end
   resources :wave_sessions
   resources :users
+  resources :alerts
 end

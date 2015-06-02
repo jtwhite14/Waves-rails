@@ -1,27 +1,45 @@
+#Waves API
 
+* Ruby version - 2.2.1
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
+* System dependencies - ImageMagic & GraphicsMagick
 
 * Configuration
 
 * Database creation
+- Make sure to change the user name in the database.yml file to your local user name
 
 * Database initialization
 
 * How to run the test suite
 
 * Services (job queues, cache servers, search engines, etc.)
+- Get NOAA data
+- Send Push Notifications
 
 * Deployment instructions
+## Staging
+- Add the heroku staging app by running, 
+```
+heroku git:remote -a waves-app-staging -r staging
+```
+- Set env vars to develop
+```
+heroku config:set RACK_ENV=development RAILS_ENV=development —app waves-app-staging
+```
+- To deploy run
+```
+git push staging master
+```
 
-* ...
+
+* Debugging
+## tail the logs
+```
+heroku logs --tail
+```
+* Bugsnag for debugging the rails app
+* Fabric for debugging the ios app
 
 
 Please feel free to use a different markup language if you do not plan to run

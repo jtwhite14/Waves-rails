@@ -14,6 +14,7 @@ class Observation < ActiveRecord::Base
   def self.import! buoy
   	b = BuoyData::NoaaBuoyObservation.new(buoy.station_id)
   	unless (b.get == nil)
+      # primary observation data
         observation = Observation.create(
       		timestamp: DateTime.new(b.YY.to_i, b.MM.to_i, b.DD.to_i, b.hh.to_i, 0, 0),
       		wave_height: b.WVHT,
@@ -29,7 +30,13 @@ class Observation < ActiveRecord::Base
       	)
         if observation.persisted?
           buoy.update_attribute(:current_observation_id, observation.id)
+          # this calls separate data service with different data
+          # this calls to tides and water temp
+          # possibly better data source
           Observation.import_tidal_buoy_observation(buoy.tidal_buoy, observation)
+          # this is weather conditions, free tier for this service
+          # we use 3 sources for 
+          # some times parts don't have data and we have to save null
           Observation.import_weather_underground_observation(buoy, observation)
         end
         
